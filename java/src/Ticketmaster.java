@@ -17,6 +17,7 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.io.IOException;
 import java.io.File;
 import java.io.FileReader;
 import java.io.BufferedReader;
@@ -313,7 +314,38 @@ public class Ticketmaster{
 	}//end readChoice
 	
 	public static void AddUser(Ticketmaster esql){//1
+		try{
+			System.out.print("Enter User Email: ");
+			BufferedReader inp_email = new BufferedReader (new InputStreamReader(System.in));
+			String email = inp_email.readLine();
+			System.out.print("Enter First Name: ");
+			BufferedReader inp_fname = new BufferedReader (new InputStreamReader(System.in));
+			String first_name = inp_fname.readLine();
+			System.out.print("Enter Last Name: ");
+			BufferedReader inp_lname = new BufferedReader (new InputStreamReader(System.in));
+			String last_name = inp_lname.readLine();
+			System.out.print("Enter Phone Number: ");
+			BufferedReader inp_pnumber = new BufferedReader (new InputStreamReader(System.in));
+			String phone_number = inp_pnumber.readLine();
+			System.out.print("Enter Password: ");
+			BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
+			String password = inp_password.readLine();
+			System.out.println(password);
+	
+			String query = "INSERT INTO 	
+			try{
+				
+			}
+			catch{
+				System.out.println("Error adding user");
+			}
+				
+		}
+		catch(IOException e){
+			System.out.println("Error trying to create user");
+		}
 		
+
 	}
 	
 	public static void AddBooking(Ticketmaster esql){//2
