@@ -332,13 +332,9 @@ public class Ticketmaster{
 			String password = inp_password.readLine();
 			System.out.println(password);
 	
-			String query = "INSERT INTO 	
-			try{
-				
-			}
-			catch{
-				System.out.println("Error adding user");
-			}
+			String query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
+			System.out.println(query);
+			executeUpdate(query);	
 				
 		}
 		catch(IOException e){
