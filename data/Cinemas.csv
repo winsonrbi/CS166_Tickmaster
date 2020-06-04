@@ -1,0 +1,999 @@
+1,218,Regal Cinemas,8
+2,269,Studio Movie Grill,8
+3,34,General Cinemas,8
+4,257,Studio Movie Grill,7
+5,211,AMC,5
+6,301,Regal Cinemas,7
+7,242,Studio Movie Grill,10
+8,310,General Cinemas,6
+9,69,Harkins,7
+10,282,AMC,10
+11,216,AMC,7
+12,189,IMAX Corporation,5
+13,5,Harkins,6
+14,90,IMAX Corporation,5
+15,296,AMC,8
+16,46,Regal Cinemas,5
+17,73,AMC,9
+18,69,Regal Cinemas,5
+19,141,Harkins,7
+20,306,Harkins,6
+21,38,AMC,5
+22,134,General Cinemas,6
+23,288,Regal Cinemas,8
+24,219,IMAX Corporation,5
+25,107,Regal Cinemas,9
+26,107,Regal Cinemas,7
+27,118,Studio Movie Grill,6
+28,44,General Cinemas,5
+29,18,General Cinemas,5
+30,80,AMC,7
+31,213,Regal Cinemas,8
+32,18,Studio Movie Grill,5
+33,252,Regal Cinemas,9
+34,23,AMC,6
+35,260,General Cinemas,5
+36,202,IMAX Corporation,9
+37,250,Studio Movie Grill,10
+38,209,AMC,9
+39,76,IMAX Corporation,8
+40,215,General Cinemas,6
+41,149,General Cinemas,5
+42,107,IMAX Corporation,6
+43,216,IMAX Corporation,7
+44,304,Harkins,10
+45,266,General Cinemas,9
+46,82,Harkins,6
+47,248,AMC,6
+48,21,AMC,7
+49,9,IMAX Corporation,8
+50,113,IMAX Corporation,9
+51,211,Regal Cinemas,5
+52,25,General Cinemas,9
+53,132,Regal Cinemas,9
+54,198,General Cinemas,8
+55,242,Regal Cinemas,10
+56,130,Regal Cinemas,8
+57,102,Studio Movie Grill,5
+58,170,AMC,5
+59,288,AMC,5
+60,100,Studio Movie Grill,6
+61,34,AMC,5
+62,69,Harkins,5
+63,21,Harkins,5
+64,54,General Cinemas,8
+65,59,AMC,6
+66,178,Studio Movie Grill,7
+67,284,AMC,9
+68,90,General Cinemas,9
+69,288,Harkins,9
+70,107,AMC,10
+71,56,IMAX Corporation,8
+72,171,General Cinemas,8
+73,204,IMAX Corporation,8
+74,85,AMC,9
+75,306,AMC,10
+76,54,Regal Cinemas,10
+77,277,AMC,10
+78,154,Studio Movie Grill,6
+79,55,Studio Movie Grill,9
+80,94,Studio Movie Grill,9
+81,134,Studio Movie Grill,10
+82,162,Harkins,6
+83,203,General Cinemas,8
+84,20,General Cinemas,5
+85,203,IMAX Corporation,9
+86,22,IMAX Corporation,10
+87,285,AMC,7
+88,227,General Cinemas,8
+89,50,Studio Movie Grill,8
+90,16,AMC,8
+91,193,General Cinemas,6
+92,82,Studio Movie Grill,6
+93,276,AMC,7
+94,139,Harkins,10
+95,26,Studio Movie Grill,7
+96,84,Harkins,10
+97,183,Studio Movie Grill,5
+98,31,General Cinemas,5
+99,87,IMAX Corporation,8
+100,145,Studio Movie Grill,6
+101,130,AMC,9
+102,64,General Cinemas,6
+103,279,General Cinemas,6
+104,121,Harkins,5
+105,271,General Cinemas,10
+106,34,Regal Cinemas,5
+107,99,Studio Movie Grill,10
+108,310,General Cinemas,7
+109,274,Regal Cinemas,10
+110,17,AMC,8
+111,95,IMAX Corporation,10
+112,54,General Cinemas,8
+113,153,Studio Movie Grill,9
+114,260,Harkins,10
+115,184,Regal Cinemas,7
+116,233,IMAX Corporation,10
+117,304,Regal Cinemas,10
+118,34,Regal Cinemas,7
+119,236,AMC,9
+120,94,Harkins,5
+121,114,Harkins,7
+122,226,Studio Movie Grill,5
+123,281,IMAX Corporation,10
+124,234,IMAX Corporation,9
+125,272,Harkins,7
+126,92,IMAX Corporation,9
+127,263,Regal Cinemas,7
+128,64,AMC,10
+129,228,Harkins,5
+130,271,IMAX Corporation,8
+131,177,Regal Cinemas,10
+132,73,Studio Movie Grill,5
+133,52,IMAX Corporation,10
+134,46,Harkins,5
+135,157,General Cinemas,10
+136,284,General Cinemas,5
+137,149,AMC,5
+138,45,Regal Cinemas,9
+139,206,Studio Movie Grill,9
+140,82,AMC,7
+141,107,IMAX Corporation,9
+142,297,General Cinemas,9
+143,91,Regal Cinemas,5
+144,167,General Cinemas,6
+145,201,Harkins,7
+146,254,Regal Cinemas,5
+147,126,Studio Movie Grill,8
+148,103,Regal Cinemas,5
+149,157,General Cinemas,5
+150,171,IMAX Corporation,10
+151,42,AMC,5
+152,12,Studio Movie Grill,7
+153,29,Studio Movie Grill,6
+154,162,Harkins,5
+155,37,General Cinemas,6
+156,153,IMAX Corporation,9
+157,42,IMAX Corporation,6
+158,296,Studio Movie Grill,5
+159,4,Regal Cinemas,9
+160,89,Regal Cinemas,5
+161,172,General Cinemas,9
+162,208,Studio Movie Grill,7
+163,236,IMAX Corporation,8
+164,121,Regal Cinemas,8
+165,67,AMC,10
+166,249,Harkins,6
+167,270,Harkins,8
+168,260,Harkins,10
+169,178,AMC,10
+170,309,AMC,9
+171,105,AMC,9
+172,86,Regal Cinemas,6
+173,270,Harkins,9
+174,120,General Cinemas,10
+175,261,IMAX Corporation,9
+176,206,AMC,6
+177,98,General Cinemas,6
+178,87,AMC,7
+179,244,Regal Cinemas,7
+180,114,Regal Cinemas,5
+181,257,IMAX Corporation,6
+182,93,Harkins,8
+183,180,Harkins,6
+184,152,Studio Movie Grill,7
+185,289,AMC,6
+186,74,General Cinemas,8
+187,46,IMAX Corporation,5
+188,202,General Cinemas,6
+189,229,Regal Cinemas,9
+190,137,Harkins,5
+191,179,Studio Movie Grill,5
+192,210,Regal Cinemas,7
+193,264,AMC,10
+194,245,Regal Cinemas,10
+195,235,General Cinemas,10
+196,151,Studio Movie Grill,6
+197,13,General Cinemas,8
+198,248,Harkins,7
+199,28,Regal Cinemas,6
+200,168,AMC,8
+201,88,Studio Movie Grill,8
+202,118,Regal Cinemas,8
+203,175,Studio Movie Grill,6
+204,209,Harkins,10
+205,303,Studio Movie Grill,8
+206,223,Harkins,10
+207,154,General Cinemas,5
+208,267,IMAX Corporation,6
+209,33,Harkins,8
+210,15,Studio Movie Grill,7
+211,32,General Cinemas,5
+212,296,IMAX Corporation,9
+213,294,General Cinemas,9
+214,304,General Cinemas,5
+215,270,Harkins,5
+216,115,General Cinemas,10
+217,188,IMAX Corporation,9
+218,165,General Cinemas,7
+219,147,IMAX Corporation,7
+220,62,Harkins,10
+221,93,AMC,5
+222,171,AMC,8
+223,247,IMAX Corporation,5
+224,113,Regal Cinemas,6
+225,25,General Cinemas,9
+226,164,Studio Movie Grill,5
+227,203,Regal Cinemas,10
+228,18,Studio Movie Grill,6
+229,217,Regal Cinemas,7
+230,291,Harkins,6
+231,111,Studio Movie Grill,6
+232,154,Harkins,7
+233,95,IMAX Corporation,10
+234,86,IMAX Corporation,5
+235,61,Regal Cinemas,8
+236,88,Studio Movie Grill,9
+237,92,AMC,10
+238,29,IMAX Corporation,10
+239,289,General Cinemas,7
+240,69,Regal Cinemas,5
+241,101,Regal Cinemas,8
+242,59,Harkins,7
+243,134,Harkins,8
+244,143,Studio Movie Grill,9
+245,15,IMAX Corporation,7
+246,214,Harkins,7
+247,221,Harkins,8
+248,282,Studio Movie Grill,6
+249,231,Harkins,5
+250,119,Regal Cinemas,6
+251,150,General Cinemas,10
+252,2,Harkins,10
+253,10,General Cinemas,6
+254,61,Studio Movie Grill,8
+255,274,Regal Cinemas,9
+256,63,Studio Movie Grill,8
+257,12,Regal Cinemas,10
+258,160,General Cinemas,8
+259,38,AMC,8
+260,94,Studio Movie Grill,5
+261,28,Studio Movie Grill,10
+262,129,Regal Cinemas,8
+263,84,General Cinemas,8
+264,60,Regal Cinemas,7
+265,260,Regal Cinemas,10
+266,64,General Cinemas,7
+267,210,Regal Cinemas,7
+268,40,Studio Movie Grill,9
+269,192,Studio Movie Grill,6
+270,209,Studio Movie Grill,10
+271,27,Regal Cinemas,7
+272,195,Regal Cinemas,6
+273,105,Studio Movie Grill,6
+274,286,Harkins,6
+275,183,AMC,9
+276,281,Regal Cinemas,7
+277,217,Harkins,8
+278,220,Studio Movie Grill,8
+279,256,General Cinemas,9
+280,71,Harkins,5
+281,206,IMAX Corporation,8
+282,64,Studio Movie Grill,6
+283,189,Regal Cinemas,10
+284,219,Regal Cinemas,8
+285,225,Studio Movie Grill,8
+286,192,IMAX Corporation,5
+287,91,Studio Movie Grill,9
+288,257,General Cinemas,8
+289,48,Regal Cinemas,5
+290,2,Harkins,8
+291,220,Regal Cinemas,9
+292,59,Harkins,9
+293,279,Studio Movie Grill,5
+294,112,Regal Cinemas,9
+295,209,General Cinemas,5
+296,25,General Cinemas,6
+297,53,Studio Movie Grill,8
+298,16,General Cinemas,10
+299,126,Harkins,7
+300,38,General Cinemas,7
+301,267,Studio Movie Grill,9
+302,191,IMAX Corporation,5
+303,256,Harkins,9
+304,126,AMC,6
+305,215,AMC,10
+306,219,Regal Cinemas,9
+307,253,Studio Movie Grill,6
+308,233,General Cinemas,6
+309,248,AMC,8
+310,208,Studio Movie Grill,8
+311,15,AMC,10
+312,115,Harkins,9
+313,77,AMC,5
+314,82,AMC,10
+315,251,Harkins,9
+316,50,IMAX Corporation,10
+317,238,Harkins,6
+318,271,Studio Movie Grill,5
+319,304,General Cinemas,6
+320,17,Studio Movie Grill,9
+321,191,AMC,8
+322,142,Studio Movie Grill,10
+323,144,Studio Movie Grill,10
+324,22,Harkins,5
+325,144,IMAX Corporation,7
+326,268,AMC,9
+327,8,AMC,7
+328,5,IMAX Corporation,7
+329,108,General Cinemas,8
+330,47,IMAX Corporation,5
+331,273,Harkins,10
+332,170,Harkins,7
+333,166,AMC,6
+334,289,AMC,7
+335,73,Regal Cinemas,5
+336,121,IMAX Corporation,8
+337,280,General Cinemas,10
+338,167,General Cinemas,6
+339,281,IMAX Corporation,5
+340,160,IMAX Corporation,10
+341,243,Studio Movie Grill,6
+342,222,IMAX Corporation,8
+343,201,General Cinemas,9
+344,74,AMC,5
+345,18,IMAX Corporation,10
+346,78,Harkins,6
+347,121,Studio Movie Grill,10
+348,151,Regal Cinemas,7
+349,236,Studio Movie Grill,6
+350,292,Studio Movie Grill,8
+351,114,Studio Movie Grill,8
+352,115,Regal Cinemas,9
+353,132,AMC,6
+354,117,IMAX Corporation,8
+355,154,General Cinemas,10
+356,213,IMAX Corporation,9
+357,87,IMAX Corporation,5
+358,196,IMAX Corporation,7
+359,63,Studio Movie Grill,9
+360,219,AMC,10
+361,306,Studio Movie Grill,6
+362,295,Regal Cinemas,5
+363,69,General Cinemas,9
+364,49,Studio Movie Grill,10
+365,282,Regal Cinemas,7
+366,146,AMC,10
+367,72,AMC,9
+368,306,Harkins,7
+369,168,Harkins,5
+370,200,IMAX Corporation,7
+371,187,Studio Movie Grill,8
+372,306,General Cinemas,5
+373,201,AMC,6
+374,145,Studio Movie Grill,8
+375,149,IMAX Corporation,9
+376,145,Studio Movie Grill,8
+377,29,General Cinemas,6
+378,78,AMC,7
+379,160,General Cinemas,5
+380,65,Studio Movie Grill,6
+381,64,General Cinemas,8
+382,236,AMC,5
+383,273,General Cinemas,8
+384,148,IMAX Corporation,9
+385,187,IMAX Corporation,7
+386,261,IMAX Corporation,7
+387,282,Harkins,5
+388,88,Harkins,6
+389,132,General Cinemas,5
+390,262,Regal Cinemas,6
+391,185,Regal Cinemas,10
+392,224,IMAX Corporation,5
+393,264,AMC,10
+394,61,AMC,7
+395,119,Regal Cinemas,8
+396,128,Regal Cinemas,10
+397,35,Harkins,6
+398,152,Regal Cinemas,10
+399,301,Harkins,9
+400,28,IMAX Corporation,9
+401,40,IMAX Corporation,5
+402,21,Harkins,10
+403,250,IMAX Corporation,9
+404,28,Regal Cinemas,5
+405,195,Regal Cinemas,5
+406,15,General Cinemas,7
+407,297,Regal Cinemas,8
+408,299,IMAX Corporation,6
+409,143,IMAX Corporation,5
+410,221,Studio Movie Grill,10
+411,179,Regal Cinemas,8
+412,259,Studio Movie Grill,9
+413,134,IMAX Corporation,8
+414,207,General Cinemas,7
+415,134,IMAX Corporation,10
+416,6,Studio Movie Grill,8
+417,192,General Cinemas,5
+418,107,Harkins,5
+419,30,IMAX Corporation,10
+420,289,Studio Movie Grill,9
+421,140,Studio Movie Grill,8
+422,113,General Cinemas,8
+423,277,Regal Cinemas,5
+424,58,Regal Cinemas,10
+425,34,Regal Cinemas,9
+426,67,IMAX Corporation,5
+427,51,Regal Cinemas,6
+428,81,IMAX Corporation,7
+429,103,Regal Cinemas,7
+430,263,General Cinemas,6
+431,207,Regal Cinemas,10
+432,112,AMC,9
+433,164,Harkins,6
+434,102,AMC,10
+435,58,General Cinemas,8
+436,133,General Cinemas,5
+437,175,General Cinemas,10
+438,98,Studio Movie Grill,5
+439,22,Regal Cinemas,10
+440,80,Studio Movie Grill,5
+441,144,General Cinemas,10
+442,260,Harkins,6
+443,287,General Cinemas,6
+444,151,General Cinemas,10
+445,96,Harkins,8
+446,245,Studio Movie Grill,6
+447,8,Regal Cinemas,9
+448,256,Studio Movie Grill,5
+449,52,General Cinemas,7
+450,235,Studio Movie Grill,8
+451,122,Studio Movie Grill,9
+452,81,IMAX Corporation,5
+453,25,IMAX Corporation,7
+454,282,Studio Movie Grill,5
+455,190,AMC,10
+456,131,Studio Movie Grill,7
+457,130,Regal Cinemas,9
+458,95,IMAX Corporation,9
+459,56,Harkins,7
+460,137,Harkins,8
+461,193,Harkins,9
+462,2,Studio Movie Grill,9
+463,56,AMC,9
+464,276,Studio Movie Grill,6
+465,230,Regal Cinemas,7
+466,265,Harkins,6
+467,94,General Cinemas,5
+468,129,Regal Cinemas,10
+469,25,Regal Cinemas,9
+470,230,Harkins,9
+471,122,IMAX Corporation,9
+472,155,Regal Cinemas,5
+473,267,General Cinemas,7
+474,209,Studio Movie Grill,5
+475,308,IMAX Corporation,6
+476,55,IMAX Corporation,5
+477,264,Regal Cinemas,10
+478,159,Studio Movie Grill,9
+479,111,Studio Movie Grill,6
+480,111,General Cinemas,8
+481,19,AMC,9
+482,266,Harkins,6
+483,152,Harkins,8
+484,291,AMC,9
+485,151,General Cinemas,10
+486,138,IMAX Corporation,9
+487,73,General Cinemas,6
+488,69,IMAX Corporation,7
+489,10,IMAX Corporation,5
+490,294,IMAX Corporation,8
+491,131,General Cinemas,7
+492,306,Regal Cinemas,5
+493,214,IMAX Corporation,9
+494,140,Harkins,5
+495,63,Regal Cinemas,5
+496,44,IMAX Corporation,7
+497,237,Regal Cinemas,9
+498,57,AMC,5
+499,178,IMAX Corporation,10
+500,136,Harkins,9
+501,70,Harkins,5
+502,4,General Cinemas,7
+503,261,Studio Movie Grill,6
+504,118,Studio Movie Grill,10
+505,60,Harkins,8
+506,168,IMAX Corporation,9
+507,231,IMAX Corporation,8
+508,41,General Cinemas,9
+509,229,AMC,9
+510,41,General Cinemas,6
+511,6,AMC,9
+512,26,IMAX Corporation,10
+513,254,Studio Movie Grill,5
+514,264,General Cinemas,7
+515,101,Studio Movie Grill,10
+516,252,General Cinemas,7
+517,93,General Cinemas,7
+518,29,Harkins,10
+519,272,AMC,10
+520,23,Studio Movie Grill,9
+521,276,Studio Movie Grill,9
+522,11,General Cinemas,10
+523,80,Regal Cinemas,8
+524,267,Studio Movie Grill,8
+525,231,Studio Movie Grill,9
+526,120,Harkins,5
+527,280,Regal Cinemas,5
+528,271,General Cinemas,8
+529,272,Studio Movie Grill,9
+530,301,AMC,10
+531,271,Harkins,6
+532,137,AMC,6
+533,53,Regal Cinemas,10
+534,91,General Cinemas,5
+535,288,Harkins,6
+536,105,AMC,7
+537,25,AMC,6
+538,214,General Cinemas,5
+539,259,Harkins,9
+540,9,Regal Cinemas,6
+541,289,General Cinemas,5
+542,209,Studio Movie Grill,9
+543,214,General Cinemas,5
+544,69,AMC,10
+545,176,Harkins,7
+546,310,General Cinemas,6
+547,246,Harkins,10
+548,225,IMAX Corporation,7
+549,292,Harkins,8
+550,18,AMC,5
+551,209,AMC,9
+552,228,Studio Movie Grill,8
+553,30,IMAX Corporation,8
+554,193,AMC,9
+555,126,AMC,6
+556,93,Harkins,5
+557,111,Studio Movie Grill,8
+558,168,Studio Movie Grill,9
+559,207,Regal Cinemas,8
+560,293,Harkins,9
+561,289,AMC,5
+562,44,AMC,5
+563,1,Regal Cinemas,9
+564,34,Studio Movie Grill,10
+565,160,Harkins,7
+566,105,General Cinemas,9
+567,165,General Cinemas,10
+568,45,IMAX Corporation,7
+569,74,AMC,9
+570,64,Studio Movie Grill,5
+571,203,IMAX Corporation,9
+572,267,General Cinemas,9
+573,36,General Cinemas,10
+574,118,Regal Cinemas,10
+575,66,Harkins,7
+576,288,AMC,10
+577,101,Studio Movie Grill,8
+578,1,General Cinemas,8
+579,26,AMC,5
+580,154,AMC,6
+581,142,Regal Cinemas,10
+582,264,General Cinemas,5
+583,68,Harkins,6
+584,291,IMAX Corporation,9
+585,149,IMAX Corporation,7
+586,220,IMAX Corporation,8
+587,95,Studio Movie Grill,8
+588,87,AMC,5
+589,256,IMAX Corporation,5
+590,209,General Cinemas,6
+591,223,IMAX Corporation,5
+592,66,Harkins,6
+593,102,IMAX Corporation,10
+594,57,IMAX Corporation,5
+595,110,AMC,5
+596,36,General Cinemas,5
+597,55,IMAX Corporation,9
+598,139,General Cinemas,7
+599,14,Studio Movie Grill,7
+600,227,Regal Cinemas,7
+601,258,Studio Movie Grill,5
+602,170,Regal Cinemas,5
+603,1,General Cinemas,9
+604,129,Harkins,9
+605,237,Regal Cinemas,10
+606,180,Regal Cinemas,8
+607,156,General Cinemas,5
+608,192,IMAX Corporation,7
+609,294,General Cinemas,5
+610,72,Regal Cinemas,10
+611,235,Studio Movie Grill,6
+612,95,Studio Movie Grill,8
+613,83,Harkins,8
+614,286,Studio Movie Grill,5
+615,264,AMC,9
+616,121,AMC,6
+617,299,AMC,6
+618,176,General Cinemas,8
+619,266,AMC,8
+620,36,General Cinemas,10
+621,249,IMAX Corporation,10
+622,269,AMC,5
+623,142,General Cinemas,7
+624,56,Harkins,6
+625,173,Regal Cinemas,10
+626,119,AMC,9
+627,263,Regal Cinemas,10
+628,308,Studio Movie Grill,5
+629,285,IMAX Corporation,10
+630,245,Studio Movie Grill,8
+631,62,Harkins,10
+632,219,Harkins,9
+633,36,Studio Movie Grill,10
+634,36,IMAX Corporation,9
+635,262,Regal Cinemas,7
+636,195,General Cinemas,10
+637,193,Harkins,10
+638,309,General Cinemas,10
+639,135,AMC,10
+640,184,General Cinemas,5
+641,201,AMC,7
+642,102,General Cinemas,9
+643,266,IMAX Corporation,5
+644,78,Regal Cinemas,9
+645,15,IMAX Corporation,8
+646,303,Harkins,10
+647,123,Regal Cinemas,7
+648,88,AMC,8
+649,141,Regal Cinemas,5
+650,39,AMC,6
+651,271,AMC,8
+652,247,Regal Cinemas,10
+653,251,IMAX Corporation,10
+654,25,Harkins,7
+655,203,Studio Movie Grill,8
+656,246,Regal Cinemas,5
+657,209,Regal Cinemas,7
+658,134,General Cinemas,10
+659,127,Harkins,6
+660,169,Harkins,5
+661,62,Studio Movie Grill,8
+662,164,Harkins,8
+663,284,Studio Movie Grill,9
+664,150,AMC,9
+665,203,Harkins,7
+666,238,Harkins,10
+667,243,Studio Movie Grill,8
+668,112,Harkins,7
+669,216,IMAX Corporation,9
+670,94,General Cinemas,8
+671,136,General Cinemas,10
+672,151,Studio Movie Grill,5
+673,95,Studio Movie Grill,7
+674,303,AMC,9
+675,38,IMAX Corporation,9
+676,139,IMAX Corporation,10
+677,20,Harkins,5
+678,66,General Cinemas,9
+679,212,AMC,10
+680,58,IMAX Corporation,9
+681,187,Regal Cinemas,7
+682,310,Studio Movie Grill,9
+683,307,General Cinemas,8
+684,285,Harkins,9
+685,131,Studio Movie Grill,6
+686,288,Studio Movie Grill,5
+687,174,Studio Movie Grill,10
+688,123,General Cinemas,6
+689,103,AMC,10
+690,102,Regal Cinemas,9
+691,287,AMC,10
+692,116,AMC,8
+693,81,Regal Cinemas,5
+694,155,Harkins,7
+695,213,Studio Movie Grill,5
+696,102,IMAX Corporation,10
+697,87,Harkins,10
+698,22,General Cinemas,5
+699,20,AMC,8
+700,210,Studio Movie Grill,6
+701,97,IMAX Corporation,10
+702,47,Regal Cinemas,9
+703,191,Regal Cinemas,9
+704,52,Harkins,8
+705,307,Studio Movie Grill,7
+706,260,Studio Movie Grill,7
+707,235,Regal Cinemas,9
+708,227,Regal Cinemas,5
+709,221,General Cinemas,6
+710,69,AMC,6
+711,9,Regal Cinemas,5
+712,272,IMAX Corporation,9
+713,160,Studio Movie Grill,10
+714,5,Harkins,7
+715,284,General Cinemas,5
+716,54,AMC,5
+717,145,AMC,8
+718,295,IMAX Corporation,10
+719,307,Studio Movie Grill,8
+720,247,Harkins,8
+721,189,General Cinemas,9
+722,127,AMC,8
+723,113,Studio Movie Grill,10
+724,33,Regal Cinemas,7
+725,296,General Cinemas,8
+726,33,Harkins,6
+727,94,Studio Movie Grill,6
+728,277,Studio Movie Grill,7
+729,39,IMAX Corporation,10
+730,80,Studio Movie Grill,6
+731,151,General Cinemas,8
+732,117,Regal Cinemas,6
+733,266,Studio Movie Grill,5
+734,280,General Cinemas,5
+735,286,IMAX Corporation,5
+736,110,Studio Movie Grill,6
+737,34,Studio Movie Grill,8
+738,45,Harkins,5
+739,294,Studio Movie Grill,10
+740,19,General Cinemas,7
+741,166,Studio Movie Grill,7
+742,126,Studio Movie Grill,7
+743,134,Harkins,10
+744,185,Studio Movie Grill,8
+745,283,IMAX Corporation,9
+746,114,Regal Cinemas,9
+747,162,AMC,9
+748,153,Regal Cinemas,10
+749,85,Harkins,5
+750,171,IMAX Corporation,8
+751,81,Studio Movie Grill,8
+752,23,Harkins,5
+753,65,Studio Movie Grill,8
+754,208,Regal Cinemas,6
+755,269,Harkins,6
+756,191,IMAX Corporation,9
+757,73,IMAX Corporation,9
+758,137,Regal Cinemas,10
+759,122,AMC,9
+760,128,Regal Cinemas,6
+761,68,IMAX Corporation,10
+762,219,AMC,7
+763,141,IMAX Corporation,9
+764,237,IMAX Corporation,5
+765,13,AMC,7
+766,98,Studio Movie Grill,8
+767,205,Harkins,8
+768,73,IMAX Corporation,10
+769,290,Studio Movie Grill,6
+770,267,IMAX Corporation,10
+771,31,General Cinemas,9
+772,44,AMC,10
+773,193,Regal Cinemas,6
+774,76,Studio Movie Grill,9
+775,65,Harkins,7
+776,14,General Cinemas,7
+777,18,AMC,8
+778,54,Studio Movie Grill,6
+779,5,IMAX Corporation,10
+780,22,Harkins,10
+781,276,Studio Movie Grill,8
+782,9,Harkins,6
+783,300,Harkins,8
+784,293,Harkins,9
+785,191,General Cinemas,8
+786,161,IMAX Corporation,9
+787,149,Regal Cinemas,8
+788,42,Regal Cinemas,10
+789,115,AMC,7
+790,120,AMC,5
+791,20,AMC,6
+792,179,AMC,5
+793,103,Harkins,8
+794,189,General Cinemas,10
+795,103,AMC,7
+796,44,Regal Cinemas,7
+797,255,AMC,6
+798,140,Regal Cinemas,6
+799,255,Studio Movie Grill,6
+800,209,AMC,9
+801,108,General Cinemas,6
+802,267,Harkins,7
+803,252,IMAX Corporation,7
+804,170,Harkins,8
+805,51,AMC,6
+806,154,Harkins,5
+807,39,Harkins,10
+808,179,Studio Movie Grill,5
+809,302,IMAX Corporation,8
+810,116,AMC,5
+811,228,AMC,7
+812,54,IMAX Corporation,7
+813,6,Studio Movie Grill,10
+814,84,IMAX Corporation,7
+815,206,IMAX Corporation,5
+816,273,Studio Movie Grill,5
+817,166,Regal Cinemas,8
+818,109,AMC,10
+819,193,IMAX Corporation,9
+820,75,Harkins,7
+821,7,Studio Movie Grill,7
+822,151,Regal Cinemas,7
+823,187,AMC,10
+824,300,Harkins,9
+825,127,IMAX Corporation,10
+826,250,Regal Cinemas,7
+827,216,Regal Cinemas,10
+828,140,IMAX Corporation,9
+829,210,Studio Movie Grill,7
+830,218,Regal Cinemas,8
+831,43,Harkins,5
+832,227,Studio Movie Grill,7
+833,171,Studio Movie Grill,7
+834,14,IMAX Corporation,8
+835,92,Harkins,9
+836,226,Regal Cinemas,5
+837,283,Regal Cinemas,6
+838,98,Regal Cinemas,5
+839,198,General Cinemas,7
+840,226,Studio Movie Grill,5
+841,287,General Cinemas,5
+842,252,Regal Cinemas,9
+843,5,General Cinemas,7
+844,33,Regal Cinemas,7
+845,34,AMC,6
+846,143,Studio Movie Grill,9
+847,13,Studio Movie Grill,10
+848,44,General Cinemas,9
+849,112,AMC,5
+850,270,Regal Cinemas,10
+851,107,General Cinemas,9
+852,123,Regal Cinemas,5
+853,152,Harkins,10
+854,292,Studio Movie Grill,8
+855,182,General Cinemas,9
+856,251,General Cinemas,6
+857,214,Harkins,5
+858,269,Harkins,6
+859,243,IMAX Corporation,9
+860,31,Harkins,7
+861,105,IMAX Corporation,8
+862,241,Studio Movie Grill,6
+863,72,IMAX Corporation,6
+864,192,Regal Cinemas,8
+865,184,Regal Cinemas,5
+866,88,Harkins,6
+867,73,General Cinemas,8
+868,222,Regal Cinemas,9
+869,230,Harkins,5
+870,70,Studio Movie Grill,7
+871,56,Regal Cinemas,9
+872,196,Harkins,8
+873,157,Regal Cinemas,5
+874,159,Regal Cinemas,8
+875,270,AMC,9
+876,111,IMAX Corporation,8
+877,253,General Cinemas,6
+878,225,Regal Cinemas,10
+879,31,Harkins,9
+880,79,Studio Movie Grill,10
+881,4,Regal Cinemas,6
+882,308,AMC,9
+883,149,Harkins,9
+884,224,Studio Movie Grill,9
+885,303,General Cinemas,6
+886,93,General Cinemas,6
+887,242,IMAX Corporation,6
+888,247,Studio Movie Grill,5
+889,172,AMC,6
+890,273,Harkins,8
+891,104,Harkins,6
+892,74,Regal Cinemas,10
+893,140,Studio Movie Grill,5
+894,251,Regal Cinemas,5
+895,66,Harkins,6
+896,240,Harkins,7
+897,141,Studio Movie Grill,9
+898,206,IMAX Corporation,9
+899,161,Harkins,5
+900,149,General Cinemas,9
+901,155,IMAX Corporation,10
+902,148,General Cinemas,10
+903,289,Studio Movie Grill,5
+904,173,IMAX Corporation,5
+905,163,Studio Movie Grill,6
+906,190,AMC,5
+907,64,Harkins,8
+908,259,Regal Cinemas,6
+909,129,IMAX Corporation,6
+910,219,AMC,10
+911,295,Studio Movie Grill,8
+912,263,General Cinemas,10
+913,80,Harkins,10
+914,263,Studio Movie Grill,5
+915,83,Regal Cinemas,5
+916,257,Harkins,10
+917,255,Regal Cinemas,7
+918,97,IMAX Corporation,9
+919,198,General Cinemas,7
+920,218,IMAX Corporation,8
+921,297,Regal Cinemas,7
+922,245,IMAX Corporation,9
+923,266,Regal Cinemas,8
+924,225,Studio Movie Grill,5
+925,71,AMC,10
+926,127,AMC,8
+927,56,Studio Movie Grill,9
+928,229,IMAX Corporation,6
+929,295,AMC,8
+930,200,Harkins,8
+931,225,Harkins,8
+932,11,AMC,7
+933,213,AMC,6
+934,278,Studio Movie Grill,5
+935,134,AMC,10
+936,256,General Cinemas,9
+937,57,AMC,8
+938,16,Regal Cinemas,8
+939,215,Harkins,8
+940,257,Harkins,5
+941,129,IMAX Corporation,5
+942,121,General Cinemas,6
+943,14,IMAX Corporation,7
+944,144,IMAX Corporation,9
+945,181,Harkins,8
+946,270,AMC,10
+947,181,Harkins,6
+948,247,AMC,8
+949,266,Regal Cinemas,9
+950,146,Harkins,7
+951,168,Regal Cinemas,9
+952,178,IMAX Corporation,9
+953,281,IMAX Corporation,7
+954,286,Studio Movie Grill,5
+955,250,General Cinemas,10
+956,121,IMAX Corporation,8
+957,139,Harkins,8
+958,276,Studio Movie Grill,10
+959,90,Regal Cinemas,9
+960,30,AMC,9
+961,253,Regal Cinemas,7
+962,271,AMC,6
+963,306,Studio Movie Grill,5
+964,60,General Cinemas,9
+965,11,Harkins,10
+966,174,IMAX Corporation,7
+967,82,Studio Movie Grill,6
+968,22,AMC,8
+969,196,General Cinemas,7
+970,284,AMC,8
+971,11,Harkins,8
+972,258,IMAX Corporation,5
+973,65,General Cinemas,7
+974,100,Studio Movie Grill,7
+975,200,IMAX Corporation,6
+976,143,AMC,7
+977,156,AMC,10
+978,263,Regal Cinemas,5
+979,76,IMAX Corporation,5
+980,198,IMAX Corporation,9
+981,129,Harkins,8
+982,54,AMC,9
+983,129,Studio Movie Grill,10
+984,280,Studio Movie Grill,6
+985,260,Harkins,6
+986,30,Regal Cinemas,8
+987,271,Harkins,5
+988,43,Studio Movie Grill,7
+989,84,Harkins,7
+990,86,AMC,9
+991,302,AMC,6
+992,16,IMAX Corporation,8
+993,58,AMC,8
+994,171,Harkins,10
+995,178,General Cinemas,6
+996,66,Harkins,8
+997,129,AMC,7
+998,247,Regal Cinemas,8
+999,254,IMAX Corporation,8

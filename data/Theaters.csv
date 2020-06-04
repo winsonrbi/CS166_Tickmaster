@@ -1,0 +1,999 @@
+1,1,Regal Cinemas Theaters 1,20
+2,2,Studio Movie Grill Theaters 1,27
+3,3,General Cinemas Theaters 1,27
+4,4,Harkins Theaters 1,23
+5,5,Regal Cinemas Theaters 1,20
+6,6,Harkins Theaters 1,30
+7,7,AMC Theaters 1,27
+8,8,AMC Theaters 1,24
+9,9,General Cinemas Theaters 1,21
+10,10,Regal Cinemas Theaters 1,26
+11,11,Regal Cinemas Theaters 1,21
+12,12,Harkins Theaters 1,30
+13,13,AMC Theaters 1,23
+14,14,Regal Cinemas Theaters 1,25
+15,15,Studio Movie Grill Theaters 1,24
+16,16,Regal Cinemas Theaters 1,23
+17,17,Studio Movie Grill Theaters 1,29
+18,18,Harkins Theaters 1,22
+19,19,Harkins Theaters 1,24
+20,20,Regal Cinemas Theaters 1,26
+21,21,Harkins Theaters 1,24
+22,22,IMAX Corporation Theaters 1,27
+23,23,Regal Cinemas Theaters 1,26
+24,24,IMAX Corporation Theaters 1,24
+25,25,General Cinemas Theaters 1,26
+26,26,Studio Movie Grill Theaters 1,25
+27,27,Regal Cinemas Theaters 1,29
+28,28,General Cinemas Theaters 1,28
+29,29,General Cinemas Theaters 1,29
+30,30,General Cinemas Theaters 1,24
+31,31,Studio Movie Grill Theaters 1,24
+32,32,Regal Cinemas Theaters 1,25
+33,33,Harkins Theaters 1,23
+34,34,IMAX Corporation Theaters 1,23
+35,35,Harkins Theaters 1,26
+36,36,AMC Theaters 1,28
+37,37,Studio Movie Grill Theaters 1,20
+38,38,IMAX Corporation Theaters 1,28
+39,39,AMC Theaters 1,25
+40,40,Regal Cinemas Theaters 1,28
+41,41,IMAX Corporation Theaters 1,20
+42,42,Regal Cinemas Theaters 1,24
+43,43,Harkins Theaters 1,25
+44,44,AMC Theaters 1,21
+45,45,Harkins Theaters 1,25
+46,46,Studio Movie Grill Theaters 1,25
+47,47,Harkins Theaters 1,26
+48,48,Harkins Theaters 1,29
+49,49,Studio Movie Grill Theaters 1,30
+50,50,IMAX Corporation Theaters 1,29
+51,51,Studio Movie Grill Theaters 1,29
+52,52,Harkins Theaters 1,23
+53,53,Regal Cinemas Theaters 1,21
+54,54,Studio Movie Grill Theaters 1,28
+55,55,Regal Cinemas Theaters 1,20
+56,56,AMC Theaters 1,28
+57,57,AMC Theaters 1,25
+58,58,Harkins Theaters 1,20
+59,59,Harkins Theaters 1,22
+60,60,IMAX Corporation Theaters 1,27
+61,61,Studio Movie Grill Theaters 1,26
+62,62,IMAX Corporation Theaters 1,28
+63,63,Harkins Theaters 1,30
+64,64,General Cinemas Theaters 1,25
+65,65,Regal Cinemas Theaters 1,23
+66,66,AMC Theaters 1,26
+67,67,AMC Theaters 1,26
+68,68,AMC Theaters 1,20
+69,69,Regal Cinemas Theaters 1,30
+70,70,General Cinemas Theaters 1,24
+71,71,IMAX Corporation Theaters 1,27
+72,72,Regal Cinemas Theaters 1,21
+73,73,Regal Cinemas Theaters 1,26
+74,74,AMC Theaters 1,28
+75,75,IMAX Corporation Theaters 1,21
+76,76,AMC Theaters 1,29
+77,77,Studio Movie Grill Theaters 1,21
+78,78,AMC Theaters 1,30
+79,79,General Cinemas Theaters 1,21
+80,80,Harkins Theaters 1,22
+81,81,Harkins Theaters 1,25
+82,82,IMAX Corporation Theaters 1,20
+83,83,AMC Theaters 1,22
+84,84,IMAX Corporation Theaters 1,23
+85,85,IMAX Corporation Theaters 1,22
+86,86,General Cinemas Theaters 1,21
+87,87,Harkins Theaters 1,23
+88,88,IMAX Corporation Theaters 1,25
+89,89,Regal Cinemas Theaters 1,22
+90,90,AMC Theaters 1,21
+91,91,Regal Cinemas Theaters 1,30
+92,92,Regal Cinemas Theaters 1,21
+93,93,IMAX Corporation Theaters 1,20
+94,94,IMAX Corporation Theaters 1,28
+95,95,Harkins Theaters 1,24
+96,96,General Cinemas Theaters 1,27
+97,97,Studio Movie Grill Theaters 1,20
+98,98,Studio Movie Grill Theaters 1,30
+99,99,Regal Cinemas Theaters 1,20
+100,100,Harkins Theaters 1,21
+101,101,Studio Movie Grill Theaters 1,24
+102,102,Harkins Theaters 1,22
+103,103,AMC Theaters 1,20
+104,104,Studio Movie Grill Theaters 1,22
+105,105,Regal Cinemas Theaters 1,22
+106,106,AMC Theaters 1,27
+107,107,IMAX Corporation Theaters 1,22
+108,108,Regal Cinemas Theaters 1,20
+109,109,AMC Theaters 1,24
+110,110,General Cinemas Theaters 1,28
+111,111,IMAX Corporation Theaters 1,27
+112,112,Studio Movie Grill Theaters 1,29
+113,113,AMC Theaters 1,24
+114,114,General Cinemas Theaters 1,21
+115,115,AMC Theaters 1,21
+116,116,Studio Movie Grill Theaters 1,26
+117,117,Harkins Theaters 1,28
+118,118,General Cinemas Theaters 1,26
+119,119,Harkins Theaters 1,20
+120,120,Harkins Theaters 1,22
+121,121,IMAX Corporation Theaters 1,24
+122,122,Regal Cinemas Theaters 1,25
+123,123,Harkins Theaters 1,25
+124,124,IMAX Corporation Theaters 1,26
+125,125,Studio Movie Grill Theaters 1,20
+126,126,General Cinemas Theaters 1,26
+127,127,AMC Theaters 1,23
+128,128,Regal Cinemas Theaters 1,21
+129,129,IMAX Corporation Theaters 1,24
+130,130,General Cinemas Theaters 1,22
+131,131,Studio Movie Grill Theaters 1,29
+132,132,Regal Cinemas Theaters 1,25
+133,133,Harkins Theaters 1,26
+134,134,IMAX Corporation Theaters 1,29
+135,135,Studio Movie Grill Theaters 1,30
+136,136,Regal Cinemas Theaters 1,22
+137,137,General Cinemas Theaters 1,29
+138,138,General Cinemas Theaters 1,25
+139,139,AMC Theaters 1,23
+140,140,AMC Theaters 1,20
+141,141,AMC Theaters 1,28
+142,142,Harkins Theaters 1,25
+143,143,IMAX Corporation Theaters 1,20
+144,144,Harkins Theaters 1,20
+145,145,General Cinemas Theaters 1,28
+146,146,AMC Theaters 1,28
+147,147,Studio Movie Grill Theaters 1,23
+148,148,AMC Theaters 1,23
+149,149,IMAX Corporation Theaters 1,30
+150,150,Studio Movie Grill Theaters 1,30
+151,151,Harkins Theaters 1,23
+152,152,Regal Cinemas Theaters 1,20
+153,153,IMAX Corporation Theaters 1,24
+154,154,AMC Theaters 1,30
+155,155,Regal Cinemas Theaters 1,26
+156,156,IMAX Corporation Theaters 1,29
+157,157,AMC Theaters 1,20
+158,158,Harkins Theaters 1,27
+159,159,AMC Theaters 1,25
+160,160,General Cinemas Theaters 1,30
+161,161,Regal Cinemas Theaters 1,30
+162,162,IMAX Corporation Theaters 1,25
+163,163,Regal Cinemas Theaters 1,21
+164,164,AMC Theaters 1,30
+165,165,Studio Movie Grill Theaters 1,21
+166,166,IMAX Corporation Theaters 1,25
+167,167,AMC Theaters 1,27
+168,168,Harkins Theaters 1,23
+169,169,AMC Theaters 1,27
+170,170,General Cinemas Theaters 1,22
+171,171,IMAX Corporation Theaters 1,27
+172,172,Regal Cinemas Theaters 1,26
+173,173,AMC Theaters 1,29
+174,174,Regal Cinemas Theaters 1,22
+175,175,Studio Movie Grill Theaters 1,29
+176,176,Regal Cinemas Theaters 1,22
+177,177,Regal Cinemas Theaters 1,23
+178,178,AMC Theaters 1,22
+179,179,AMC Theaters 1,21
+180,180,Regal Cinemas Theaters 1,29
+181,181,IMAX Corporation Theaters 1,25
+182,182,IMAX Corporation Theaters 1,28
+183,183,Regal Cinemas Theaters 1,22
+184,184,Studio Movie Grill Theaters 1,21
+185,185,AMC Theaters 1,28
+186,186,Studio Movie Grill Theaters 1,30
+187,187,Studio Movie Grill Theaters 1,28
+188,188,AMC Theaters 1,22
+189,189,Studio Movie Grill Theaters 1,29
+190,190,Studio Movie Grill Theaters 1,30
+191,191,General Cinemas Theaters 1,30
+192,192,General Cinemas Theaters 1,21
+193,193,General Cinemas Theaters 1,20
+194,194,AMC Theaters 1,26
+195,195,General Cinemas Theaters 1,20
+196,196,AMC Theaters 1,25
+197,197,Harkins Theaters 1,29
+198,198,Harkins Theaters 1,23
+199,199,AMC Theaters 1,27
+200,200,Harkins Theaters 1,26
+201,201,IMAX Corporation Theaters 1,27
+202,202,Harkins Theaters 1,28
+203,203,IMAX Corporation Theaters 1,22
+204,204,General Cinemas Theaters 1,26
+205,205,General Cinemas Theaters 1,30
+206,206,General Cinemas Theaters 1,23
+207,207,Studio Movie Grill Theaters 1,25
+208,208,Regal Cinemas Theaters 1,23
+209,209,General Cinemas Theaters 1,24
+210,210,IMAX Corporation Theaters 1,22
+211,211,AMC Theaters 1,22
+212,212,AMC Theaters 1,20
+213,213,AMC Theaters 1,30
+214,214,IMAX Corporation Theaters 1,24
+215,215,Regal Cinemas Theaters 1,27
+216,216,Studio Movie Grill Theaters 1,21
+217,217,Regal Cinemas Theaters 1,25
+218,218,Regal Cinemas Theaters 1,28
+219,219,Studio Movie Grill Theaters 1,23
+220,220,Regal Cinemas Theaters 1,21
+221,221,General Cinemas Theaters 1,24
+222,222,Regal Cinemas Theaters 1,21
+223,223,IMAX Corporation Theaters 1,26
+224,224,Studio Movie Grill Theaters 1,29
+225,225,General Cinemas Theaters 1,24
+226,226,Regal Cinemas Theaters 1,20
+227,227,Harkins Theaters 1,25
+228,228,Studio Movie Grill Theaters 1,27
+229,229,Studio Movie Grill Theaters 1,20
+230,230,Studio Movie Grill Theaters 1,21
+231,231,Harkins Theaters 1,28
+232,232,General Cinemas Theaters 1,24
+233,233,AMC Theaters 1,30
+234,234,Regal Cinemas Theaters 1,29
+235,235,AMC Theaters 1,23
+236,236,IMAX Corporation Theaters 1,30
+237,237,General Cinemas Theaters 1,27
+238,238,Studio Movie Grill Theaters 1,28
+239,239,Studio Movie Grill Theaters 1,28
+240,240,AMC Theaters 1,28
+241,241,Studio Movie Grill Theaters 1,20
+242,242,AMC Theaters 1,30
+243,243,Regal Cinemas Theaters 1,25
+244,244,Harkins Theaters 1,23
+245,245,General Cinemas Theaters 1,23
+246,246,General Cinemas Theaters 1,29
+247,247,AMC Theaters 1,26
+248,248,Studio Movie Grill Theaters 1,26
+249,249,General Cinemas Theaters 1,29
+250,250,Studio Movie Grill Theaters 1,29
+251,251,AMC Theaters 1,23
+252,252,IMAX Corporation Theaters 1,27
+253,253,Regal Cinemas Theaters 1,20
+254,254,Regal Cinemas Theaters 1,23
+255,255,IMAX Corporation Theaters 1,25
+256,256,IMAX Corporation Theaters 1,20
+257,257,Harkins Theaters 1,25
+258,258,IMAX Corporation Theaters 1,25
+259,259,AMC Theaters 1,22
+260,260,General Cinemas Theaters 1,22
+261,261,IMAX Corporation Theaters 1,20
+262,262,AMC Theaters 1,23
+263,263,Harkins Theaters 1,29
+264,264,IMAX Corporation Theaters 1,24
+265,265,IMAX Corporation Theaters 1,22
+266,266,General Cinemas Theaters 1,21
+267,267,AMC Theaters 1,27
+268,268,General Cinemas Theaters 1,28
+269,269,Regal Cinemas Theaters 1,29
+270,270,Harkins Theaters 1,24
+271,271,IMAX Corporation Theaters 1,25
+272,272,General Cinemas Theaters 1,22
+273,273,Regal Cinemas Theaters 1,25
+274,274,IMAX Corporation Theaters 1,29
+275,275,Regal Cinemas Theaters 1,25
+276,276,IMAX Corporation Theaters 1,20
+277,277,IMAX Corporation Theaters 1,27
+278,278,Studio Movie Grill Theaters 1,26
+279,279,Studio Movie Grill Theaters 1,22
+280,280,Harkins Theaters 1,21
+281,281,Studio Movie Grill Theaters 1,20
+282,282,AMC Theaters 1,28
+283,283,IMAX Corporation Theaters 1,30
+284,284,AMC Theaters 1,23
+285,285,General Cinemas Theaters 1,25
+286,286,IMAX Corporation Theaters 1,21
+287,287,Harkins Theaters 1,23
+288,288,Regal Cinemas Theaters 1,23
+289,289,AMC Theaters 1,26
+290,290,Harkins Theaters 1,21
+291,291,General Cinemas Theaters 1,30
+292,292,Studio Movie Grill Theaters 1,25
+293,293,IMAX Corporation Theaters 1,24
+294,294,General Cinemas Theaters 1,21
+295,295,Studio Movie Grill Theaters 1,30
+296,296,General Cinemas Theaters 1,21
+297,297,IMAX Corporation Theaters 1,22
+298,298,General Cinemas Theaters 1,26
+299,299,Regal Cinemas Theaters 1,24
+300,300,AMC Theaters 1,23
+301,301,Studio Movie Grill Theaters 1,28
+302,302,AMC Theaters 1,21
+303,303,Regal Cinemas Theaters 1,29
+304,304,Regal Cinemas Theaters 1,25
+305,305,Harkins Theaters 1,25
+306,306,Harkins Theaters 1,21
+307,307,AMC Theaters 1,30
+308,308,AMC Theaters 1,24
+309,309,Regal Cinemas Theaters 1,25
+310,310,Studio Movie Grill Theaters 1,23
+311,311,General Cinemas Theaters 1,22
+312,312,General Cinemas Theaters 1,22
+313,313,AMC Theaters 1,23
+314,314,IMAX Corporation Theaters 1,21
+315,315,IMAX Corporation Theaters 1,22
+316,316,Regal Cinemas Theaters 1,27
+317,317,Harkins Theaters 1,28
+318,318,General Cinemas Theaters 1,29
+319,319,Regal Cinemas Theaters 1,28
+320,320,General Cinemas Theaters 1,25
+321,321,Studio Movie Grill Theaters 1,29
+322,322,Regal Cinemas Theaters 1,22
+323,323,IMAX Corporation Theaters 1,28
+324,324,IMAX Corporation Theaters 1,25
+325,325,Harkins Theaters 1,22
+326,326,IMAX Corporation Theaters 1,29
+327,327,General Cinemas Theaters 1,22
+328,328,AMC Theaters 1,29
+329,329,AMC Theaters 1,20
+330,330,IMAX Corporation Theaters 1,21
+331,331,IMAX Corporation Theaters 1,28
+332,332,Studio Movie Grill Theaters 1,21
+333,333,Harkins Theaters 1,29
+334,334,General Cinemas Theaters 1,24
+335,335,Harkins Theaters 1,29
+336,336,Studio Movie Grill Theaters 1,22
+337,337,Harkins Theaters 1,25
+338,338,Harkins Theaters 1,22
+339,339,AMC Theaters 1,26
+340,340,IMAX Corporation Theaters 1,22
+341,341,AMC Theaters 1,22
+342,342,AMC Theaters 1,24
+343,343,Studio Movie Grill Theaters 1,22
+344,344,General Cinemas Theaters 1,24
+345,345,AMC Theaters 1,28
+346,346,General Cinemas Theaters 1,29
+347,347,General Cinemas Theaters 1,20
+348,348,AMC Theaters 1,29
+349,349,IMAX Corporation Theaters 1,20
+350,350,General Cinemas Theaters 1,26
+351,351,Studio Movie Grill Theaters 1,22
+352,352,Regal Cinemas Theaters 1,28
+353,353,General Cinemas Theaters 1,29
+354,354,Studio Movie Grill Theaters 1,21
+355,355,Harkins Theaters 1,29
+356,356,General Cinemas Theaters 1,20
+357,357,AMC Theaters 1,26
+358,358,Harkins Theaters 1,22
+359,359,Harkins Theaters 1,28
+360,360,Harkins Theaters 1,22
+361,361,IMAX Corporation Theaters 1,23
+362,362,Studio Movie Grill Theaters 1,20
+363,363,Studio Movie Grill Theaters 1,22
+364,364,General Cinemas Theaters 1,29
+365,365,Studio Movie Grill Theaters 1,24
+366,366,Regal Cinemas Theaters 1,22
+367,367,General Cinemas Theaters 1,20
+368,368,IMAX Corporation Theaters 1,30
+369,369,IMAX Corporation Theaters 1,28
+370,370,Regal Cinemas Theaters 1,21
+371,371,Harkins Theaters 1,23
+372,372,Harkins Theaters 1,20
+373,373,General Cinemas Theaters 1,22
+374,374,AMC Theaters 1,20
+375,375,Studio Movie Grill Theaters 1,27
+376,376,General Cinemas Theaters 1,21
+377,377,Harkins Theaters 1,20
+378,378,Harkins Theaters 1,23
+379,379,Regal Cinemas Theaters 1,27
+380,380,Harkins Theaters 1,20
+381,381,AMC Theaters 1,20
+382,382,Regal Cinemas Theaters 1,29
+383,383,General Cinemas Theaters 1,20
+384,384,Studio Movie Grill Theaters 1,30
+385,385,General Cinemas Theaters 1,26
+386,386,IMAX Corporation Theaters 1,27
+387,387,Studio Movie Grill Theaters 1,20
+388,388,Harkins Theaters 1,21
+389,389,Studio Movie Grill Theaters 1,21
+390,390,Studio Movie Grill Theaters 1,27
+391,391,General Cinemas Theaters 1,26
+392,392,Regal Cinemas Theaters 1,30
+393,393,Studio Movie Grill Theaters 1,25
+394,394,Studio Movie Grill Theaters 1,20
+395,395,General Cinemas Theaters 1,24
+396,396,General Cinemas Theaters 1,20
+397,397,AMC Theaters 1,22
+398,398,Regal Cinemas Theaters 1,21
+399,399,Harkins Theaters 1,29
+400,400,Harkins Theaters 1,23
+401,401,Harkins Theaters 1,24
+402,402,General Cinemas Theaters 1,26
+403,403,General Cinemas Theaters 1,29
+404,404,Regal Cinemas Theaters 1,22
+405,405,Regal Cinemas Theaters 1,21
+406,406,Harkins Theaters 1,27
+407,407,Regal Cinemas Theaters 1,28
+408,408,IMAX Corporation Theaters 1,25
+409,409,IMAX Corporation Theaters 1,23
+410,410,IMAX Corporation Theaters 1,22
+411,411,AMC Theaters 1,20
+412,412,Harkins Theaters 1,23
+413,413,Studio Movie Grill Theaters 1,23
+414,414,IMAX Corporation Theaters 1,27
+415,415,IMAX Corporation Theaters 1,30
+416,416,AMC Theaters 1,26
+417,417,Regal Cinemas Theaters 1,24
+418,418,Studio Movie Grill Theaters 1,30
+419,419,Regal Cinemas Theaters 1,30
+420,420,IMAX Corporation Theaters 1,28
+421,421,General Cinemas Theaters 1,29
+422,422,Regal Cinemas Theaters 1,24
+423,423,General Cinemas Theaters 1,29
+424,424,Regal Cinemas Theaters 1,29
+425,425,General Cinemas Theaters 1,20
+426,426,IMAX Corporation Theaters 1,22
+427,427,Harkins Theaters 1,24
+428,428,General Cinemas Theaters 1,22
+429,429,General Cinemas Theaters 1,29
+430,430,IMAX Corporation Theaters 1,26
+431,431,Studio Movie Grill Theaters 1,30
+432,432,Studio Movie Grill Theaters 1,30
+433,433,Regal Cinemas Theaters 1,24
+434,434,IMAX Corporation Theaters 1,30
+435,435,General Cinemas Theaters 1,25
+436,436,Harkins Theaters 1,29
+437,437,AMC Theaters 1,23
+438,438,Studio Movie Grill Theaters 1,30
+439,439,Harkins Theaters 1,21
+440,440,General Cinemas Theaters 1,27
+441,441,Harkins Theaters 1,21
+442,442,Regal Cinemas Theaters 1,30
+443,443,Studio Movie Grill Theaters 1,24
+444,444,IMAX Corporation Theaters 1,22
+445,445,Studio Movie Grill Theaters 1,20
+446,446,General Cinemas Theaters 1,23
+447,447,Studio Movie Grill Theaters 1,28
+448,448,Regal Cinemas Theaters 1,30
+449,449,Regal Cinemas Theaters 1,28
+450,450,IMAX Corporation Theaters 1,28
+451,451,Harkins Theaters 1,26
+452,452,AMC Theaters 1,22
+453,453,Studio Movie Grill Theaters 1,20
+454,454,AMC Theaters 1,27
+455,455,Regal Cinemas Theaters 1,29
+456,456,Harkins Theaters 1,28
+457,457,IMAX Corporation Theaters 1,30
+458,458,AMC Theaters 1,22
+459,459,Studio Movie Grill Theaters 1,23
+460,460,Studio Movie Grill Theaters 1,26
+461,461,Studio Movie Grill Theaters 1,27
+462,462,Studio Movie Grill Theaters 1,22
+463,463,General Cinemas Theaters 1,27
+464,464,IMAX Corporation Theaters 1,25
+465,465,Studio Movie Grill Theaters 1,22
+466,466,Studio Movie Grill Theaters 1,21
+467,467,Studio Movie Grill Theaters 1,29
+468,468,Studio Movie Grill Theaters 1,30
+469,469,AMC Theaters 1,28
+470,470,Studio Movie Grill Theaters 1,29
+471,471,Studio Movie Grill Theaters 1,30
+472,472,General Cinemas Theaters 1,27
+473,473,Harkins Theaters 1,22
+474,474,AMC Theaters 1,22
+475,475,IMAX Corporation Theaters 1,23
+476,476,General Cinemas Theaters 1,26
+477,477,IMAX Corporation Theaters 1,21
+478,478,Harkins Theaters 1,22
+479,479,General Cinemas Theaters 1,20
+480,480,Harkins Theaters 1,27
+481,481,AMC Theaters 1,23
+482,482,AMC Theaters 1,30
+483,483,General Cinemas Theaters 1,27
+484,484,Regal Cinemas Theaters 1,23
+485,485,IMAX Corporation Theaters 1,22
+486,486,Studio Movie Grill Theaters 1,28
+487,487,Studio Movie Grill Theaters 1,23
+488,488,Harkins Theaters 1,23
+489,489,Studio Movie Grill Theaters 1,22
+490,490,Studio Movie Grill Theaters 1,20
+491,491,Studio Movie Grill Theaters 1,20
+492,492,General Cinemas Theaters 1,21
+493,493,General Cinemas Theaters 1,22
+494,494,IMAX Corporation Theaters 1,28
+495,495,General Cinemas Theaters 1,30
+496,496,AMC Theaters 1,25
+497,497,Harkins Theaters 1,21
+498,498,Harkins Theaters 1,26
+499,499,AMC Theaters 1,22
+500,500,AMC Theaters 1,20
+501,501,General Cinemas Theaters 1,30
+502,502,Regal Cinemas Theaters 1,20
+503,503,General Cinemas Theaters 1,22
+504,504,Studio Movie Grill Theaters 1,21
+505,505,Studio Movie Grill Theaters 1,21
+506,506,IMAX Corporation Theaters 1,28
+507,507,General Cinemas Theaters 1,30
+508,508,Studio Movie Grill Theaters 1,26
+509,509,Regal Cinemas Theaters 1,27
+510,510,Studio Movie Grill Theaters 1,30
+511,511,AMC Theaters 1,26
+512,512,IMAX Corporation Theaters 1,22
+513,513,AMC Theaters 1,27
+514,514,AMC Theaters 1,24
+515,515,Studio Movie Grill Theaters 1,20
+516,516,Regal Cinemas Theaters 1,25
+517,517,Studio Movie Grill Theaters 1,25
+518,518,AMC Theaters 1,27
+519,519,Harkins Theaters 1,26
+520,520,General Cinemas Theaters 1,28
+521,521,Harkins Theaters 1,20
+522,522,IMAX Corporation Theaters 1,25
+523,523,Harkins Theaters 1,20
+524,524,Studio Movie Grill Theaters 1,29
+525,525,IMAX Corporation Theaters 1,28
+526,526,Regal Cinemas Theaters 1,20
+527,527,AMC Theaters 1,26
+528,528,Harkins Theaters 1,21
+529,529,Regal Cinemas Theaters 1,28
+530,530,AMC Theaters 1,20
+531,531,IMAX Corporation Theaters 1,27
+532,532,General Cinemas Theaters 1,29
+533,533,Harkins Theaters 1,29
+534,534,Studio Movie Grill Theaters 1,21
+535,535,Studio Movie Grill Theaters 1,28
+536,536,AMC Theaters 1,22
+537,537,General Cinemas Theaters 1,21
+538,538,Harkins Theaters 1,26
+539,539,Harkins Theaters 1,27
+540,540,Studio Movie Grill Theaters 1,21
+541,541,IMAX Corporation Theaters 1,23
+542,542,Studio Movie Grill Theaters 1,22
+543,543,General Cinemas Theaters 1,23
+544,544,Studio Movie Grill Theaters 1,30
+545,545,Harkins Theaters 1,28
+546,546,Harkins Theaters 1,27
+547,547,Studio Movie Grill Theaters 1,29
+548,548,AMC Theaters 1,22
+549,549,Studio Movie Grill Theaters 1,24
+550,550,IMAX Corporation Theaters 1,26
+551,551,IMAX Corporation Theaters 1,22
+552,552,Regal Cinemas Theaters 1,29
+553,553,General Cinemas Theaters 1,24
+554,554,AMC Theaters 1,24
+555,555,Studio Movie Grill Theaters 1,27
+556,556,IMAX Corporation Theaters 1,20
+557,557,Regal Cinemas Theaters 1,24
+558,558,Harkins Theaters 1,22
+559,559,IMAX Corporation Theaters 1,29
+560,560,General Cinemas Theaters 1,28
+561,561,Harkins Theaters 1,30
+562,562,Regal Cinemas Theaters 1,30
+563,563,General Cinemas Theaters 1,28
+564,564,Harkins Theaters 1,26
+565,565,General Cinemas Theaters 1,25
+566,566,Regal Cinemas Theaters 1,30
+567,567,Regal Cinemas Theaters 1,25
+568,568,General Cinemas Theaters 1,25
+569,569,Studio Movie Grill Theaters 1,22
+570,570,General Cinemas Theaters 1,30
+571,571,IMAX Corporation Theaters 1,23
+572,572,Regal Cinemas Theaters 1,29
+573,573,AMC Theaters 1,29
+574,574,Regal Cinemas Theaters 1,26
+575,575,IMAX Corporation Theaters 1,28
+576,576,Studio Movie Grill Theaters 1,25
+577,577,General Cinemas Theaters 1,23
+578,578,Regal Cinemas Theaters 1,21
+579,579,IMAX Corporation Theaters 1,23
+580,580,Regal Cinemas Theaters 1,21
+581,581,Regal Cinemas Theaters 1,24
+582,582,General Cinemas Theaters 1,22
+583,583,Regal Cinemas Theaters 1,21
+584,584,AMC Theaters 1,22
+585,585,IMAX Corporation Theaters 1,24
+586,586,General Cinemas Theaters 1,26
+587,587,AMC Theaters 1,30
+588,588,IMAX Corporation Theaters 1,27
+589,589,Harkins Theaters 1,28
+590,590,Harkins Theaters 1,28
+591,591,Regal Cinemas Theaters 1,27
+592,592,General Cinemas Theaters 1,28
+593,593,Harkins Theaters 1,23
+594,594,AMC Theaters 1,30
+595,595,General Cinemas Theaters 1,30
+596,596,General Cinemas Theaters 1,26
+597,597,IMAX Corporation Theaters 1,21
+598,598,General Cinemas Theaters 1,22
+599,599,IMAX Corporation Theaters 1,26
+600,600,Regal Cinemas Theaters 1,30
+601,601,IMAX Corporation Theaters 1,22
+602,602,General Cinemas Theaters 1,23
+603,603,Studio Movie Grill Theaters 1,23
+604,604,Studio Movie Grill Theaters 1,25
+605,605,Harkins Theaters 1,20
+606,606,General Cinemas Theaters 1,24
+607,607,General Cinemas Theaters 1,24
+608,608,IMAX Corporation Theaters 1,23
+609,609,Studio Movie Grill Theaters 1,21
+610,610,IMAX Corporation Theaters 1,21
+611,611,AMC Theaters 1,30
+612,612,Harkins Theaters 1,30
+613,613,Regal Cinemas Theaters 1,23
+614,614,General Cinemas Theaters 1,21
+615,615,Harkins Theaters 1,21
+616,616,General Cinemas Theaters 1,24
+617,617,Regal Cinemas Theaters 1,27
+618,618,Studio Movie Grill Theaters 1,20
+619,619,IMAX Corporation Theaters 1,27
+620,620,Regal Cinemas Theaters 1,24
+621,621,AMC Theaters 1,24
+622,622,AMC Theaters 1,28
+623,623,General Cinemas Theaters 1,29
+624,624,Harkins Theaters 1,25
+625,625,Harkins Theaters 1,24
+626,626,AMC Theaters 1,23
+627,627,IMAX Corporation Theaters 1,29
+628,628,Studio Movie Grill Theaters 1,24
+629,629,General Cinemas Theaters 1,28
+630,630,IMAX Corporation Theaters 1,20
+631,631,Regal Cinemas Theaters 1,25
+632,632,Studio Movie Grill Theaters 1,29
+633,633,Harkins Theaters 1,29
+634,634,Harkins Theaters 1,28
+635,635,AMC Theaters 1,20
+636,636,Harkins Theaters 1,27
+637,637,Harkins Theaters 1,28
+638,638,Harkins Theaters 1,29
+639,639,Studio Movie Grill Theaters 1,21
+640,640,General Cinemas Theaters 1,27
+641,641,Regal Cinemas Theaters 1,30
+642,642,General Cinemas Theaters 1,22
+643,643,Regal Cinemas Theaters 1,24
+644,644,Regal Cinemas Theaters 1,23
+645,645,AMC Theaters 1,22
+646,646,IMAX Corporation Theaters 1,28
+647,647,Regal Cinemas Theaters 1,23
+648,648,Harkins Theaters 1,23
+649,649,Harkins Theaters 1,23
+650,650,Harkins Theaters 1,27
+651,651,Regal Cinemas Theaters 1,29
+652,652,General Cinemas Theaters 1,23
+653,653,Harkins Theaters 1,23
+654,654,AMC Theaters 1,30
+655,655,General Cinemas Theaters 1,20
+656,656,AMC Theaters 1,30
+657,657,Studio Movie Grill Theaters 1,30
+658,658,General Cinemas Theaters 1,27
+659,659,General Cinemas Theaters 1,20
+660,660,IMAX Corporation Theaters 1,26
+661,661,AMC Theaters 1,26
+662,662,Harkins Theaters 1,24
+663,663,Studio Movie Grill Theaters 1,20
+664,664,IMAX Corporation Theaters 1,21
+665,665,Studio Movie Grill Theaters 1,20
+666,666,AMC Theaters 1,26
+667,667,Harkins Theaters 1,27
+668,668,IMAX Corporation Theaters 1,26
+669,669,Studio Movie Grill Theaters 1,22
+670,670,Studio Movie Grill Theaters 1,26
+671,671,IMAX Corporation Theaters 1,30
+672,672,AMC Theaters 1,21
+673,673,General Cinemas Theaters 1,21
+674,674,Regal Cinemas Theaters 1,22
+675,675,Studio Movie Grill Theaters 1,26
+676,676,IMAX Corporation Theaters 1,29
+677,677,Regal Cinemas Theaters 1,21
+678,678,Studio Movie Grill Theaters 1,23
+679,679,AMC Theaters 1,30
+680,680,Regal Cinemas Theaters 1,25
+681,681,Studio Movie Grill Theaters 1,27
+682,682,General Cinemas Theaters 1,21
+683,683,IMAX Corporation Theaters 1,28
+684,684,AMC Theaters 1,22
+685,685,Regal Cinemas Theaters 1,30
+686,686,Regal Cinemas Theaters 1,29
+687,687,Harkins Theaters 1,29
+688,688,AMC Theaters 1,23
+689,689,Harkins Theaters 1,30
+690,690,Harkins Theaters 1,22
+691,691,Harkins Theaters 1,23
+692,692,IMAX Corporation Theaters 1,24
+693,693,General Cinemas Theaters 1,26
+694,694,General Cinemas Theaters 1,25
+695,695,General Cinemas Theaters 1,23
+696,696,AMC Theaters 1,30
+697,697,AMC Theaters 1,24
+698,698,AMC Theaters 1,27
+699,699,AMC Theaters 1,20
+700,700,IMAX Corporation Theaters 1,23
+701,701,General Cinemas Theaters 1,22
+702,702,AMC Theaters 1,26
+703,703,Harkins Theaters 1,23
+704,704,Studio Movie Grill Theaters 1,28
+705,705,Studio Movie Grill Theaters 1,29
+706,706,Studio Movie Grill Theaters 1,27
+707,707,Harkins Theaters 1,21
+708,708,General Cinemas Theaters 1,23
+709,709,General Cinemas Theaters 1,29
+710,710,General Cinemas Theaters 1,24
+711,711,AMC Theaters 1,21
+712,712,General Cinemas Theaters 1,24
+713,713,General Cinemas Theaters 1,26
+714,714,General Cinemas Theaters 1,23
+715,715,AMC Theaters 1,23
+716,716,Regal Cinemas Theaters 1,26
+717,717,IMAX Corporation Theaters 1,30
+718,718,Studio Movie Grill Theaters 1,30
+719,719,Studio Movie Grill Theaters 1,20
+720,720,General Cinemas Theaters 1,24
+721,721,IMAX Corporation Theaters 1,21
+722,722,IMAX Corporation Theaters 1,29
+723,723,Studio Movie Grill Theaters 1,23
+724,724,Regal Cinemas Theaters 1,26
+725,725,IMAX Corporation Theaters 1,24
+726,726,General Cinemas Theaters 1,23
+727,727,Harkins Theaters 1,26
+728,728,AMC Theaters 1,28
+729,729,Studio Movie Grill Theaters 1,25
+730,730,IMAX Corporation Theaters 1,20
+731,731,Regal Cinemas Theaters 1,29
+732,732,Studio Movie Grill Theaters 1,29
+733,733,Harkins Theaters 1,30
+734,734,Harkins Theaters 1,24
+735,735,Harkins Theaters 1,21
+736,736,Studio Movie Grill Theaters 1,26
+737,737,Regal Cinemas Theaters 1,26
+738,738,Regal Cinemas Theaters 1,26
+739,739,General Cinemas Theaters 1,26
+740,740,Harkins Theaters 1,29
+741,741,Regal Cinemas Theaters 1,27
+742,742,General Cinemas Theaters 1,30
+743,743,Regal Cinemas Theaters 1,20
+744,744,IMAX Corporation Theaters 1,21
+745,745,General Cinemas Theaters 1,25
+746,746,IMAX Corporation Theaters 1,22
+747,747,Regal Cinemas Theaters 1,29
+748,748,Harkins Theaters 1,30
+749,749,General Cinemas Theaters 1,29
+750,750,Regal Cinemas Theaters 1,29
+751,751,General Cinemas Theaters 1,29
+752,752,Studio Movie Grill Theaters 1,29
+753,753,Regal Cinemas Theaters 1,25
+754,754,IMAX Corporation Theaters 1,22
+755,755,Regal Cinemas Theaters 1,25
+756,756,Harkins Theaters 1,26
+757,757,General Cinemas Theaters 1,26
+758,758,General Cinemas Theaters 1,24
+759,759,Regal Cinemas Theaters 1,21
+760,760,AMC Theaters 1,26
+761,761,Regal Cinemas Theaters 1,20
+762,762,General Cinemas Theaters 1,21
+763,763,Regal Cinemas Theaters 1,30
+764,764,AMC Theaters 1,28
+765,765,Studio Movie Grill Theaters 1,20
+766,766,IMAX Corporation Theaters 1,22
+767,767,General Cinemas Theaters 1,24
+768,768,AMC Theaters 1,30
+769,769,AMC Theaters 1,30
+770,770,Studio Movie Grill Theaters 1,28
+771,771,Harkins Theaters 1,28
+772,772,IMAX Corporation Theaters 1,29
+773,773,General Cinemas Theaters 1,24
+774,774,IMAX Corporation Theaters 1,25
+775,775,General Cinemas Theaters 1,22
+776,776,General Cinemas Theaters 1,25
+777,777,IMAX Corporation Theaters 1,30
+778,778,Regal Cinemas Theaters 1,29
+779,779,IMAX Corporation Theaters 1,20
+780,780,AMC Theaters 1,25
+781,781,AMC Theaters 1,22
+782,782,IMAX Corporation Theaters 1,30
+783,783,General Cinemas Theaters 1,27
+784,784,IMAX Corporation Theaters 1,25
+785,785,AMC Theaters 1,21
+786,786,General Cinemas Theaters 1,21
+787,787,Harkins Theaters 1,24
+788,788,Studio Movie Grill Theaters 1,28
+789,789,Studio Movie Grill Theaters 1,30
+790,790,Regal Cinemas Theaters 1,20
+791,791,Harkins Theaters 1,26
+792,792,Harkins Theaters 1,27
+793,793,AMC Theaters 1,30
+794,794,General Cinemas Theaters 1,30
+795,795,General Cinemas Theaters 1,25
+796,796,General Cinemas Theaters 1,28
+797,797,General Cinemas Theaters 1,21
+798,798,Regal Cinemas Theaters 1,27
+799,799,Studio Movie Grill Theaters 1,26
+800,800,AMC Theaters 1,22
+801,801,IMAX Corporation Theaters 1,26
+802,802,IMAX Corporation Theaters 1,22
+803,803,IMAX Corporation Theaters 1,28
+804,804,Harkins Theaters 1,23
+805,805,AMC Theaters 1,25
+806,806,Regal Cinemas Theaters 1,30
+807,807,General Cinemas Theaters 1,27
+808,808,AMC Theaters 1,24
+809,809,Studio Movie Grill Theaters 1,20
+810,810,AMC Theaters 1,25
+811,811,General Cinemas Theaters 1,27
+812,812,Harkins Theaters 1,21
+813,813,Studio Movie Grill Theaters 1,29
+814,814,General Cinemas Theaters 1,28
+815,815,IMAX Corporation Theaters 1,27
+816,816,Harkins Theaters 1,29
+817,817,Harkins Theaters 1,27
+818,818,Regal Cinemas Theaters 1,21
+819,819,Regal Cinemas Theaters 1,28
+820,820,General Cinemas Theaters 1,29
+821,821,Harkins Theaters 1,26
+822,822,IMAX Corporation Theaters 1,22
+823,823,AMC Theaters 1,28
+824,824,Regal Cinemas Theaters 1,28
+825,825,AMC Theaters 1,29
+826,826,AMC Theaters 1,30
+827,827,AMC Theaters 1,22
+828,828,Studio Movie Grill Theaters 1,24
+829,829,Studio Movie Grill Theaters 1,20
+830,830,Harkins Theaters 1,30
+831,831,Regal Cinemas Theaters 1,27
+832,832,AMC Theaters 1,24
+833,833,Regal Cinemas Theaters 1,25
+834,834,AMC Theaters 1,28
+835,835,Regal Cinemas Theaters 1,28
+836,836,General Cinemas Theaters 1,23
+837,837,General Cinemas Theaters 1,30
+838,838,AMC Theaters 1,30
+839,839,Harkins Theaters 1,26
+840,840,Studio Movie Grill Theaters 1,21
+841,841,Harkins Theaters 1,29
+842,842,General Cinemas Theaters 1,23
+843,843,Harkins Theaters 1,24
+844,844,General Cinemas Theaters 1,25
+845,845,Studio Movie Grill Theaters 1,22
+846,846,AMC Theaters 1,23
+847,847,AMC Theaters 1,20
+848,848,Harkins Theaters 1,25
+849,849,IMAX Corporation Theaters 1,24
+850,850,Harkins Theaters 1,24
+851,851,General Cinemas Theaters 1,29
+852,852,Regal Cinemas Theaters 1,27
+853,853,General Cinemas Theaters 1,20
+854,854,Studio Movie Grill Theaters 1,25
+855,855,Harkins Theaters 1,28
+856,856,Harkins Theaters 1,20
+857,857,Studio Movie Grill Theaters 1,26
+858,858,General Cinemas Theaters 1,30
+859,859,General Cinemas Theaters 1,24
+860,860,IMAX Corporation Theaters 1,29
+861,861,AMC Theaters 1,26
+862,862,Harkins Theaters 1,20
+863,863,AMC Theaters 1,29
+864,864,AMC Theaters 1,27
+865,865,Harkins Theaters 1,21
+866,866,Regal Cinemas Theaters 1,26
+867,867,General Cinemas Theaters 1,24
+868,868,Studio Movie Grill Theaters 1,24
+869,869,AMC Theaters 1,20
+870,870,Harkins Theaters 1,27
+871,871,Regal Cinemas Theaters 1,22
+872,872,IMAX Corporation Theaters 1,29
+873,873,Studio Movie Grill Theaters 1,21
+874,874,AMC Theaters 1,30
+875,875,General Cinemas Theaters 1,23
+876,876,AMC Theaters 1,26
+877,877,Regal Cinemas Theaters 1,23
+878,878,IMAX Corporation Theaters 1,26
+879,879,Regal Cinemas Theaters 1,24
+880,880,Studio Movie Grill Theaters 1,21
+881,881,Harkins Theaters 1,25
+882,882,General Cinemas Theaters 1,24
+883,883,Regal Cinemas Theaters 1,21
+884,884,IMAX Corporation Theaters 1,22
+885,885,Studio Movie Grill Theaters 1,20
+886,886,IMAX Corporation Theaters 1,30
+887,887,Studio Movie Grill Theaters 1,28
+888,888,General Cinemas Theaters 1,21
+889,889,Harkins Theaters 1,22
+890,890,AMC Theaters 1,29
+891,891,Regal Cinemas Theaters 1,26
+892,892,General Cinemas Theaters 1,29
+893,893,IMAX Corporation Theaters 1,22
+894,894,IMAX Corporation Theaters 1,30
+895,895,Studio Movie Grill Theaters 1,30
+896,896,Regal Cinemas Theaters 1,21
+897,897,Harkins Theaters 1,20
+898,898,Harkins Theaters 1,29
+899,899,Studio Movie Grill Theaters 1,22
+900,900,Regal Cinemas Theaters 1,25
+901,901,IMAX Corporation Theaters 1,21
+902,902,Studio Movie Grill Theaters 1,24
+903,903,IMAX Corporation Theaters 1,24
+904,904,IMAX Corporation Theaters 1,24
+905,905,Studio Movie Grill Theaters 1,28
+906,906,Regal Cinemas Theaters 1,27
+907,907,Harkins Theaters 1,23
+908,908,Regal Cinemas Theaters 1,22
+909,909,IMAX Corporation Theaters 1,24
+910,910,Regal Cinemas Theaters 1,29
+911,911,General Cinemas Theaters 1,28
+912,912,Studio Movie Grill Theaters 1,28
+913,913,Studio Movie Grill Theaters 1,29
+914,914,IMAX Corporation Theaters 1,25
+915,915,AMC Theaters 1,27
+916,916,IMAX Corporation Theaters 1,27
+917,917,IMAX Corporation Theaters 1,21
+918,918,Studio Movie Grill Theaters 1,26
+919,919,Studio Movie Grill Theaters 1,26
+920,920,IMAX Corporation Theaters 1,27
+921,921,Harkins Theaters 1,23
+922,922,General Cinemas Theaters 1,21
+923,923,General Cinemas Theaters 1,25
+924,924,Harkins Theaters 1,23
+925,925,General Cinemas Theaters 1,20
+926,926,Regal Cinemas Theaters 1,29
+927,927,AMC Theaters 1,23
+928,928,AMC Theaters 1,23
+929,929,IMAX Corporation Theaters 1,27
+930,930,Studio Movie Grill Theaters 1,27
+931,931,AMC Theaters 1,20
+932,932,IMAX Corporation Theaters 1,25
+933,933,Harkins Theaters 1,28
+934,934,Regal Cinemas Theaters 1,26
+935,935,Harkins Theaters 1,25
+936,936,AMC Theaters 1,23
+937,937,Studio Movie Grill Theaters 1,25
+938,938,General Cinemas Theaters 1,29
+939,939,Studio Movie Grill Theaters 1,26
+940,940,Harkins Theaters 1,28
+941,941,AMC Theaters 1,25
+942,942,General Cinemas Theaters 1,21
+943,943,AMC Theaters 1,26
+944,944,General Cinemas Theaters 1,23
+945,945,Harkins Theaters 1,30
+946,946,Studio Movie Grill Theaters 1,22
+947,947,AMC Theaters 1,27
+948,948,IMAX Corporation Theaters 1,27
+949,949,Studio Movie Grill Theaters 1,29
+950,950,Regal Cinemas Theaters 1,25
+951,951,Studio Movie Grill Theaters 1,24
+952,952,General Cinemas Theaters 1,21
+953,953,IMAX Corporation Theaters 1,21
+954,954,Regal Cinemas Theaters 1,23
+955,955,General Cinemas Theaters 1,28
+956,956,General Cinemas Theaters 1,24
+957,957,Harkins Theaters 1,22
+958,958,Regal Cinemas Theaters 1,24
+959,959,Harkins Theaters 1,20
+960,960,General Cinemas Theaters 1,29
+961,961,Harkins Theaters 1,29
+962,962,IMAX Corporation Theaters 1,22
+963,963,Regal Cinemas Theaters 1,22
+964,964,Regal Cinemas Theaters 1,23
+965,965,General Cinemas Theaters 1,26
+966,966,AMC Theaters 1,26
+967,967,Harkins Theaters 1,26
+968,968,Harkins Theaters 1,22
+969,969,Harkins Theaters 1,29
+970,970,IMAX Corporation Theaters 1,28
+971,971,General Cinemas Theaters 1,25
+972,972,AMC Theaters 1,29
+973,973,Studio Movie Grill Theaters 1,24
+974,974,Studio Movie Grill Theaters 1,23
+975,975,Regal Cinemas Theaters 1,20
+976,976,Studio Movie Grill Theaters 1,27
+977,977,AMC Theaters 1,23
+978,978,Studio Movie Grill Theaters 1,27
+979,979,Studio Movie Grill Theaters 1,26
+980,980,Studio Movie Grill Theaters 1,24
+981,981,Regal Cinemas Theaters 1,26
+982,982,IMAX Corporation Theaters 1,22
+983,983,Studio Movie Grill Theaters 1,25
+984,984,IMAX Corporation Theaters 1,21
+985,985,General Cinemas Theaters 1,26
+986,986,Harkins Theaters 1,24
+987,987,IMAX Corporation Theaters 1,24
+988,988,AMC Theaters 1,24
+989,989,AMC Theaters 1,25
+990,990,Harkins Theaters 1,30
+991,991,Regal Cinemas Theaters 1,29
+992,992,Harkins Theaters 1,23
+993,993,Regal Cinemas Theaters 1,21
+994,994,General Cinemas Theaters 1,26
+995,995,Regal Cinemas Theaters 1,25
+996,996,AMC Theaters 1,29
+997,997,IMAX Corporation Theaters 1,30
+998,998,Harkins Theaters 1,26
+999,999,Regal Cinemas Theaters 1,22
