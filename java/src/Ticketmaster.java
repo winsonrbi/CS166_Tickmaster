@@ -327,25 +327,50 @@ public class Ticketmaster{
 			System.out.print("Enter Phone Number: ");
 			BufferedReader inp_pnumber = new BufferedReader (new InputStreamReader(System.in));
 			String phone_number = inp_pnumber.readLine();
-			System.out.print("Enter Password: ");
+			
+System.out.print("Enter Password: ");
 			BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
 			String password = inp_password.readLine();
 			System.out.println(password);
 	
 			String query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
 			System.out.println(query);
-			executeUpdate(query);	
+			try{
+				esql.executeUpdate(query);	
+			}
+			catch(SQLException e){
+				System.out.println("Error trying to add user to database");
+			}
 				
 		}
 		catch(IOException e){
-			System.out.println("Error trying to create user");
+			System.out.println("Error trying to create user, most likely issue with reading input lines");
 		}
 		
 
 	}
 	
 	public static void AddBooking(Ticketmaster esql){//2
-		
+		try{
+			while(true){
+				System.out.println("Enter User Email (Enter q to Return to Main Menu)");
+				BufferedReader inp_email = new BufferedReader(new InputStreamReader(System.in));
+				String email = inp_email.readLine();
+				if(email.equals("q")) break;
+				String query = "SELECT * FROM users WHERE email = "+"\'"+ email + "\';";
+				try{
+					int num_results = esql.executeQuery(query);
+					if(num_results == 1) break;
+					else System.out.println("Invalid User Email, Please Try Again");	
+				}	
+				catch(SQLException e){
+					System.out.println("Error executing query");	
+				}	
+			}	
+		}
+		catch(IOException e){
+			System.out.println("Error trying to add booking");
+		}	
 	}
 	
 	public static void AddMovieShowingToTheater(Ticketmaster esql){//3
@@ -373,7 +398,6 @@ public class Ticketmaster{
 	}
 	
 	public static void ListTheatersPlayingShow(Ticketmaster esql){//9
-		//
 		
 	}
 	
