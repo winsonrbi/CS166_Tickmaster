@@ -331,15 +331,14 @@ public class Ticketmaster{
 System.out.print("Enter Password: ");
 			BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
 			String password = inp_password.readLine();
-			System.out.println(password);
 	
 			String query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
-			System.out.println(query);
 			try{
 				esql.executeUpdate(query);	
 			}
 			catch(SQLException e){
 				System.out.println("Error trying to add user to database");
+				System.out.println(e);
 			}
 				
 		}
@@ -352,12 +351,18 @@ System.out.print("Enter Password: ");
 	
 	public static void AddBooking(Ticketmaster esql){//2
 		try{
+			String email = null;
+			String num_seats = null;
+			String sid = null;
+			String status = null;
+			String bid = null;
+			String query = null;
 			while(true){
 				System.out.println("Enter User Email (Enter q to Return to Main Menu)");
 				BufferedReader inp_email = new BufferedReader(new InputStreamReader(System.in));
-				String email = inp_email.readLine();
-				if(email.equals("q")) break;
-				String query = "SELECT * FROM users WHERE email = "+"\'"+ email + "\';";
+				email = inp_email.readLine();
+				if(email.equals("q")) return;
+				query = "SELECT * FROM users WHERE email = "+"\'"+ email + "\';";
 				try{
 					int num_results = esql.executeQuery(query);
 					if(num_results == 1) break;
@@ -366,6 +371,27 @@ System.out.print("Enter Password: ");
 				catch(SQLException e){
 					System.out.println("Error executing query");	
 				}	
+			}
+			
+			System.out.println("Enter number of seats");
+			BufferedReader inp_num_seats = new BufferedReader(new InputStreamReader(System.in));
+			num_seats =  inp_num_seats.readLine();
+			
+			while(true){
+				System.out.println("Enter status (Paid or Pending):");
+				BufferedReader inp_status = new BufferedReader(new InputStreamReader(System.in));
+				status = inp_status.readLine();
+				if(status.equals("Paid") || status.equals("Pending")) break;
+				else System.out.println("Ivalid Status");
+			}
+			//fetch bid
+			query = "SELECT MAX(bookings.bid) FROM bookings;";
+			try{
+				List<List<String>> bid_list = esql.executeQueryAndReturnResult(query);
+				System.out.println(bid_list.get(0));
+			}
+			catch(SQLException e){
+				System.out.println("Error with grabbing MAX(bookings.bid)");	
 			}	
 		}
 		catch(IOException e){
