@@ -24,6 +24,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
 
 /**
  * This class defines a simple embedded SQL utility class that is designed to
@@ -357,6 +362,13 @@ System.out.print("Enter Password: ");
 			String status = null;
 			String bid = null;
 			String query = null;
+			//Grab DateTime
+			Date date = Calendar.getInstance().getTime();
+			DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+			String strDate = dateFormat.format(date);
+			strDate = strDate + "-08";
+			System.out.println(strDate);
+			/*	
 			while(true){
 				System.out.println("Enter User Email (Enter q to Return to Main Menu)");
 				BufferedReader inp_email = new BufferedReader(new InputStreamReader(System.in));
@@ -372,11 +384,48 @@ System.out.print("Enter Password: ");
 					System.out.println("Error executing query");	
 				}	
 			}
-			
+			*/
+			try{
+				//Bring Movie List			
+				query = "SELECT * FROM movies;";
+				List<List<String>> movie_list = esql.executeQueryAndReturnResult(query);
+				movie_list.forEach(System.out::println);
+				//Movie Selection
+				System.out.println("Enter Movie ID");
+				BufferedReader inp_movie_choice = new BufferedReader(new InputStreamReader(System.in));
+				String movie_choice = inp_movie_choice.readLine();
+				try{
+					//Confirm movie with user
+					query = "SELECT movies.title FROM movies WHERE mvid="+movie_choice;
+					movie_list = esql.executeQueryAndReturnResult(query);
+					System.out.println("Movie Chosen: " + movie_list.get(0).get(0));
+					//Available Times
+					query = "SELECT * FROM shows WHERE mvid="+movie_choice;
+					List<List<String>> show_list = esql.executeQueryAndReturnResult(query);
+					System.out.println("Available Show Times");
+					System.out.println("[sid | mvid | sdate | sttime | edtime]");
+					show_list.forEach(System.out::println);
+					//Select a show time
+					System.out.println("Select a Show Time ID");
+					BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+					String show_time_id = inp.readLine();
+					query = "SELECT * FROM showseats WHERE bid is NULL AND sid="+show_time_id;
+					List<List<String>> available_show_times = esql.executeQueryAndReturnResult(query);
+					available_show_times.forEach(System.out::println);
+					
+				}
+				catch(SQLException e){
+					System.out.println(e);
+					return;
+				}
+			}
+			catch(SQLException e){
+				System.out.println("Error grabbing movies");
+			}
 			System.out.println("Enter number of seats");
 			BufferedReader inp_num_seats = new BufferedReader(new InputStreamReader(System.in));
 			num_seats =  inp_num_seats.readLine();
-			
+		
 			while(true){
 				System.out.println("Enter status (Paid or Pending):");
 				BufferedReader inp_status = new BufferedReader(new InputStreamReader(System.in));
@@ -392,7 +441,9 @@ System.out.print("Enter Password: ");
 			}
 			catch(SQLException e){
 				System.out.println("Error with grabbing MAX(bookings.bid)");	
-			}	
+			}
+
+			//TODO: Grab Date Info	
 		}
 		catch(IOException e){
 			System.out.println("Error trying to add booking");
