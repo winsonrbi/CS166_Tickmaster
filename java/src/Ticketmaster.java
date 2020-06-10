@@ -472,7 +472,64 @@ public class Ticketmaster{
 	}
 	
 	public static void AddMovieShowingToTheater(Ticketmaster esql){//3
-		
+		String title = null;
+		String query = null;
+		String description = null;
+		String rdate = null;
+		String country = null;
+		String duration = null;
+		String lang = null;
+		String genre = null;
+		try{
+			BufferedReader inp = null;
+			System.out.println("Add a New Movie");
+			System.out.println("Add Title of the Movie");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			title = inp.readLine();
+			
+			query = "SELECT * FROM movies WHERE title = '" + title + "'";
+			List<List<String>> title_check = esql.executeQueryAndReturnResult(query);	
+			if(title_check.size() > 0 ){
+				System.out.println("ERROR: Movie is already in database");
+				return;
+			}
+			System.out.println("Enter release date: (FORMAT yyyy-MM-dd)");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			rdate = inp.readLine();
+			//release date check
+			System.out.println("Enter description:");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			description = inp.readLine();
+			
+			System.out.println("Enter enter country:");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			country = inp.readLine();
+			
+			System.out.println("Enter duration:");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			duration = inp.readLine();
+			try{
+				int check = Integer.parseInt(duration);	
+			}	
+			catch(Exception e){
+				System.out.println("Invalid duration");
+				return;
+			}
+			System.out.println("Enter lang:");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			lang = inp.readLine();
+
+			System.out.println("Enter genre:");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			genre = inp.readLine();
+			
+			
+			
+		}
+		catch(Exception e){
+			System.out.println(e);	
+		}
+					
 	}
 	
 	public static void CancelPendingBookings(Ticketmaster esql){//4
