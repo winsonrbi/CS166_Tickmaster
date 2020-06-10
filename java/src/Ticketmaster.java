@@ -320,25 +320,31 @@ public class Ticketmaster{
 	
 	public static void AddUser(Ticketmaster esql){//1
 		try{
-			System.out.print("Enter User Email: ");
-			BufferedReader inp_email = new BufferedReader (new InputStreamReader(System.in));
-			String email = inp_email.readLine();
-			System.out.print("Enter First Name: ");
-			BufferedReader inp_fname = new BufferedReader (new InputStreamReader(System.in));
-			String first_name = inp_fname.readLine();
-			System.out.print("Enter Last Name: ");
-			BufferedReader inp_lname = new BufferedReader (new InputStreamReader(System.in));
-			String last_name = inp_lname.readLine();
-			System.out.print("Enter Phone Number: ");
-			BufferedReader inp_pnumber = new BufferedReader (new InputStreamReader(System.in));
-			String phone_number = inp_pnumber.readLine();
-			
-System.out.print("Enter Password: ");
-			BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
-			String password = inp_password.readLine();
-	
-			String query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
 			try{
+				System.out.print("Enter User Email: ");
+				BufferedReader inp_email = new BufferedReader (new InputStreamReader(System.in));
+				String email = inp_email.readLine();
+				//Check Email in database
+				String query = "SELECT * FROM users WHERE email=\'" + email + "\'";
+				List<List<String>> email_check = esql.executeQueryAndReturnResult(query);
+				if(email_check.size() > 0){
+					System.out.println("ERROR: Email already in database");
+					return;
+				}
+				System.out.print("Enter First Name: ");
+				BufferedReader inp_fname = new BufferedReader (new InputStreamReader(System.in));
+				String first_name = inp_fname.readLine();
+				System.out.print("Enter Last Name: ");
+				BufferedReader inp_lname = new BufferedReader (new InputStreamReader(System.in));
+				String last_name = inp_lname.readLine();
+				System.out.print("Enter Phone Number: ");
+				BufferedReader inp_pnumber = new BufferedReader (new InputStreamReader(System.in));
+				String phone_number = inp_pnumber.readLine();
+				System.out.print("Enter Password: ");
+				BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
+				String password = inp_password.readLine();
+		
+				query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
 				esql.executeUpdate(query);	
 			}
 			catch(SQLException e){
@@ -362,14 +368,15 @@ System.out.print("Enter Password: ");
 			String status = null;
 			String bid = null;
 			String query = null;
+			String show_time_id = null;
 			List<List<String>> available_showseats = null;
 			//Grab DateTime
+			String dateTime_format = "yyy-MM-dd HH:mm:ssX";
 			Date date = Calendar.getInstance().getTime();
-			DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+			DateFormat dateFormat = new SimpleDateFormat(dateTime_format);
 			String strDate = dateFormat.format(date);
-			strDate = strDate + "-08";
 			System.out.println(strDate);
-			/*	
+
 			while(true){
 				System.out.println("Enter User Email (Enter q to Return to Main Menu)");
 				BufferedReader inp_email = new BufferedReader(new InputStreamReader(System.in));
@@ -385,7 +392,7 @@ System.out.print("Enter Password: ");
 					System.out.println("Error executing query");	
 				}	
 			}
-			*/
+
 			try{
 				//Bring Movie List			
 				query = "SELECT * FROM movies;";
@@ -409,7 +416,7 @@ System.out.print("Enter Password: ");
 					//Select a show time
 					System.out.println("Select a Show Time ID");
 					BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
-					String show_time_id = inp.readLine();
+					show_time_id = inp.readLine();
 					query = "SELECT * FROM showseats WHERE bid is NULL AND sid= "+ show_time_id;
 					//Grab number of seats
 					available_showseats = esql.executeQueryAndReturnResult(query);
@@ -440,9 +447,14 @@ System.out.print("Enter Password: ");
 			//fetch bid
 			query = "SELECT MAX(bookings.bid) FROM bookings;";
 			try{
+				
+				//Create Booking
 				List<List<String>> bid_list = esql.executeQueryAndReturnResult(query);
-				int next_bid = Integer.parseInt(bid_list.get(0).get(0));
+				int next_bid = Integer.parseInt(bid_list.get(0).get(0)) + 1;
 				//Update seats with bid until we reach num of seats
+				
+				query = "INSERT into bookings(bid,status,bdatetime,seats,sid,email) VALUES ('"+ Integer.toString(next_bid) +"','"+ status + "','" + strDate + "','" + num_seats + "','" + show_time_id +"','" + email +"')";		
+				esql.executeUpdate(query);
 				for(int i=0; i < Integer.parseInt(num_seats);i++){
 					query = "UPDATE showseats SET bid =" + Integer.toString(next_bid) + "WHERE ssid ="+available_showseats.get(i).get(0);
 					esql.executeUpdate(query);
