@@ -362,6 +362,7 @@ System.out.print("Enter Password: ");
 			String status = null;
 			String bid = null;
 			String query = null;
+			List<List<String>> available_showseats = null;
 			//Grab DateTime
 			Date date = Calendar.getInstance().getTime();
 			DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
@@ -409,9 +410,16 @@ System.out.print("Enter Password: ");
 					System.out.println("Select a Show Time ID");
 					BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
 					String show_time_id = inp.readLine();
-					query = "SELECT * FROM showseats WHERE bid is NULL AND sid="+show_time_id;
-					List<List<String>> available_show_times = esql.executeQueryAndReturnResult(query);
-					available_show_times.forEach(System.out::println);
+					query = "SELECT * FROM showseats WHERE bid is NULL AND sid= "+ show_time_id;
+					//Grab number of seats
+					available_showseats = esql.executeQueryAndReturnResult(query);
+					System.out.println("Enter number of seats, Num Available: "+available_showseats.size());
+					inp = new BufferedReader(new InputStreamReader(System.in));
+					num_seats =  inp.readLine();
+					if(Integer.parseInt(num_seats) > available_showseats.size()){
+						System.out.println("Not enough seats");
+						return;	
+					}		
 					
 				}
 				catch(SQLException e){
@@ -422,28 +430,29 @@ System.out.print("Enter Password: ");
 			catch(SQLException e){
 				System.out.println("Error grabbing movies");
 			}
-			System.out.println("Enter number of seats");
-			BufferedReader inp_num_seats = new BufferedReader(new InputStreamReader(System.in));
-			num_seats =  inp_num_seats.readLine();
-		
 			while(true){
 				System.out.println("Enter status (Paid or Pending):");
 				BufferedReader inp_status = new BufferedReader(new InputStreamReader(System.in));
 				status = inp_status.readLine();
 				if(status.equals("Paid") || status.equals("Pending")) break;
-				else System.out.println("Ivalid Status");
+				else System.out.println("Invalid Status");
 			}
 			//fetch bid
 			query = "SELECT MAX(bookings.bid) FROM bookings;";
 			try{
 				List<List<String>> bid_list = esql.executeQueryAndReturnResult(query);
-				System.out.println(bid_list.get(0));
+				int next_bid = Integer.parseInt(bid_list.get(0).get(0));
+				//Update seats with bid until we reach num of seats
+				for(int i=0; i < Integer.parseInt(num_seats);i++){
+					query = "UPDATE showseats SET bid =" + Integer.toString(next_bid) + "WHERE ssid ="+available_showseats.get(i).get(0);
+					esql.executeUpdate(query);
+				}
+				System.out.println("Booking Complete!");
 			}
 			catch(SQLException e){
-				System.out.println("Error with grabbing MAX(bookings.bid)");	
+				System.out.println(e);	
 			}
 
-			//TODO: Grab Date Info	
 		}
 		catch(IOException e){
 			System.out.println("Error trying to add booking");
