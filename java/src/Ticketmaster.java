@@ -317,7 +317,7 @@ public class Ticketmaster{
 		}while (true);
 		return input;
 	}//end readChoice
-	
+	//TODO: ADD SHA-256 to password	
 	public static void AddUser(Ticketmaster esql){//1
 		try{
 			try{
@@ -672,8 +672,29 @@ public class Ticketmaster{
 	}
 	
 	public static void ListShowsStartingOnTimeAndDate(Ticketmaster esql){//10
-		//
-		
+		//Grab Date
+		try{
+		System.out.println("Enter Date: (FORMAT yyyy-MM-dd)");
+		BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+		String date = inp.readLine();
+		String query = null;
+
+		DateFormat show_date_check = new SimpleDateFormat("yyyy-MM-dd");
+		show_date_check.setLenient(false);
+		show_date_check.parse(date);
+		System.out.println("Enter Start Time (FORMAT HH:mm:ss)");
+		inp = new BufferedReader(new InputStreamReader(System.in));	
+		String sttime = inp.readLine();
+		DateFormat start_time_check = new SimpleDateFormat("HH:mm:ss");		
+		start_time_check.parse(sttime);
+		query = "SELECT C.cname, T.tname,S.sdate,S.sttime,S.edtime,M.title FROM shows S , movies M,plays P, theaters T, cinemas C WHERE S.sdate='"+ date +"' AND S.sttime='" + sttime +"' AND S.mvid=M.mvid AND P.sid = S.sid AND T.cid = C.cid AND P.tid = T.tid";
+		List<List<String>> shows = esql.executeQueryAndReturnResult(query);
+		System.out.println("Cinema | Theater | Start Date | Start Time | End Time | Movie Title");
+		shows.forEach(System.out::println);			
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 	}
 
 	public static void ListMovieTitlesContainingLoveReleasedAfter2010(Ticketmaster esql){//11
