@@ -480,6 +480,7 @@ public class Ticketmaster{
 		String duration = null;
 		String lang = null;
 		String genre = null;
+		String next_mvid = null;
 		try{
 			BufferedReader inp = null;
 			System.out.println("Add a New Movie");
@@ -497,6 +498,15 @@ public class Ticketmaster{
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			rdate = inp.readLine();
 			//release date check
+			DateFormat release_date_check = new SimpleDateFormat("yyyy-MM-dd");
+			release_date_check.setLenient(false);
+			try{
+				release_date_check.parse(rdate);
+			}	
+			catch(Exception e){
+				System.out.println("Error: Invalid date");
+				return;
+			}
 			System.out.println("Enter description:");
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			description = inp.readLine();
@@ -523,7 +533,12 @@ public class Ticketmaster{
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			genre = inp.readLine();
 			
-			
+			query = "SELECT MAX(mvid) FROM movies";
+			List<List<String>> max_mvid_list = esql.executeQueryAndReturnResult(query);
+			next_mvid = Integer.toString(Integer.parseInt(max_mvid_list.get(0).get(0)) + 1);
+							
+			query = "INSERT into movies(mvid,title,rdate,country,description,duration,lang,genre) VALUES ('" + next_mvid + "','" + title + "','" + rdate + "','" + country + "','" + description+ "','" + duration + "','" + lang + "','" + genre + "')";
+			esql.executeUpdate(query);	
 			
 		}
 		catch(Exception e){
