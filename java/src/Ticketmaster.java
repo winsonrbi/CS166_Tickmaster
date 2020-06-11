@@ -29,7 +29,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
-
+import java.time.Duration;
 /**
  * This class defines a simple embedded SQL utility class that is designed to
  * work with PostgreSQL JDBC drivers.
@@ -539,7 +539,68 @@ public class Ticketmaster{
 							
 			query = "INSERT into movies(mvid,title,rdate,country,description,duration,lang,genre) VALUES ('" + next_mvid + "','" + title + "','" + rdate + "','" + country + "','" + description+ "','" + duration + "','" + lang + "','" + genre + "')";
 			esql.executeUpdate(query);	
+		
+			//Add show
+			query = "SELECT * FROM theaters";
+			List<List<String>> theater_list = esql.executeQueryAndReturnResult(query);
+			theater_list.forEach(System.out::println);
+			System.out.println("Select Theater ID:");
+			inp= new BufferedReader(new InputStreamReader(System.in));
+			String tid =  inp.readLine();
+			//Input start time and then calculate end time, then we have to check theater id for shows playing at that time.
+			System.out.println("===Current Shows Playing===");
+			query = "SELECT title,sdate,sttime,edtime FROM shows S, plays P, movies M WHERE P.sid = S.sid AND S.mvid = M.mvid AND tid=" + tid;
+			List<List<String>> current_shows = esql.executeQueryAndReturnResult(query);
+			current_shows.forEach(System.out::println);
+			System.out.println("Enter Start Date (FORMAT: yyyy-MM-dd)");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			String show_date = inp.readLine();	
 			
+			DateFormat show_date_check = new SimpleDateFormat("yyyy-MM-dd");
+			show_date_check.setLenient(false);
+			try{
+				show_date_check.parse(show_date);
+				//Check if times for date are overlapping
+				query = "SELECT sttime,edtime FROM shows S, plays P WHERE  S.sid = P.sid AND tid=" + tid + " AND sdate='" + show_date +"'";
+				List<List<String>> date_check_list = esql.executeQueryAndReturnResult(query);
+				date_check_list.forEach(System.out::println);
+				System.out.println("Enter start time for movie (FORMAT: HH:mm:ss)");
+				inp = new BufferedReader (new InputStreamReader(System.in));
+				String selected_start_time = inp.readLine();
+				DateFormat show_time_check = new SimpleDateFormat("HH:mm:ss");
+				show_time_check.setLenient(false);
+				Date start_time = show_time_check.parse(selected_start_time);	
+				Date end_time = Date.from(start_time.toInstant().plus(Duration.ofSeconds(Integer.parseInt(duration))));
+					
+				for(int i = 0; i<date_check_list.size(); i++){
+					Date list_start = show_time_check.parse(date_check_list.get(i).get(0));
+					Date list_end = show_time_check.parse(date_check_list.get(i).get(1));
+					
+					if(!(start_time.after(list_end) || end_time.before(list_start))){
+						System.out.println("Conflicting times, another movie is playing at the same time");
+						return;
+					}
+					//Get data ready to insert into shows
+					String endtime_str = show_time_check.format(end_time);
+					//Grab max show id
+					query = "SELECT MAX(sid) FROM shows";
+					int next_sid = Integer.parseInt(esql.executeQueryAndReturnResult(query).get(0).get(0)) + 1;	
+					query = "INSERT into shows(sid,mvid,sdate,sttime,edtime) VALUES('" + Integer.toString(next_sid) + "','" + next_mvid + "','" + show_date + "','" + selected_start_time + "','" + endtime_str + "')";
+					esql.executeUpdate(query);
+					//Insert into table plays as well
+					query = "INSERT into plays(sid,tid) VALUES('" + Integer.toString(next_sid) + "','" + tid + "')";
+					esql.executeUpdate(query);	
+					System.out.println("Show Added"); 
+				}	
+			}	
+			catch(Exception e){
+				System.out.println("Error: Invalid date");
+				System.out.println(e);
+				return;
+			}
+
+			
+
 		}
 		catch(Exception e){
 			System.out.println(e);	
