@@ -737,7 +737,40 @@ public class Ticketmaster{
 	}
 
 	public static void ListMovieAndShowInfoAtCinemaInDateRange(Ticketmaster esql){//13
-		//
+		try{
+			String query = null;
+			List<List<String>> query_result = esql.executeQueryAndReturnResult("SELECT mvid,title FROM movies");
+			System.out.println("Movie ID | Movie Title");
+			query_result.forEach(System.out::println);
+			System.out.println("Select a Movie ID");
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+			String mvid = inp.readLine();
+			try{
+				List<List<String>> selected_query = esql.executeQueryAndReturnResult(query);
+				if(selected_query.size() == 0){
+					System.out.println("ERROR: No movies with movie id found");
+					return;
+				}
+				//Select Cinema
+				System.out.println("Select Cinema");
+				query = "SELECT C1.cid,C1.cname,C2.city_name,C2.city_state,C2.zip_code FROM cinemas C1, cities C2 WHERE C1.city_id = C2.city_id";
+				List<List<String>> cinema_list = esql.executeQueryAndReturnResult(query);
+				System.out.println("Cinema ID | Cinema Name | City Name | City State | Zip Code");
+				cinema_list.forEach(System.out::println);
+				System.out.println("Select a cinema ID");
+				inp = new BufferedReader(new InputStreamReader(System.in));
+				String cid = inp.readLine();
+						
+				//Select Date Range
+			}
+			catch(SQLException e){
+				System.out.println("Invalid Movie ID");
+				return;
+			}	
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 		
 	}
 
