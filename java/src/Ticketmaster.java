@@ -724,8 +724,16 @@ public class Ticketmaster{
 	}
 
 	public static void ListUsersWithPendingBooking(Ticketmaster esql){//12
-		//
-		
+		try{
+			String query = "SELECT fname,lname,U.email FROM users U, (SELECT * FROM bookings WHERE status = 'Pending') X WHERE X.email = U.email";
+			List<List<String>> query_result = esql.executeQueryAndReturnResult(query);
+			System.out.println("First Name | Last Name | Email ");
+			query_result.forEach(System.out::println);
+			System.out.println("Done Printing Bookings");
+		}
+		catch(Exception e){
+			System.out.println(e);	
+		}
 	}
 
 	public static void ListMovieAndShowInfoAtCinemaInDateRange(Ticketmaster esql){//13
