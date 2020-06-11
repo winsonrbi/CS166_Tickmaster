@@ -629,6 +629,45 @@ public class Ticketmaster{
 	}
 	
 	public static void ListTheatersPlayingShow(Ticketmaster esql){//9
+		String query = "SELECT X.cid, X.cname, X.tnum, C.city_name FROM cinemas X, cities C WHERE X.city_id = C.city_id";
+		String cinema_id;
+		try{
+			List<List<String>> cinema_list = esql.executeQueryAndReturnResult(query);
+			System.out.println("Cinema ID | Cinema Name | Num Theaters | City");
+			cinema_list.forEach(System.out::println);
+			System.out.println("Enter a Cinema ID");
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+
+			cinema_id = inp.readLine();
+			query = "SELECT * FROM theaters WHERE cid=" + cinema_id;
+			List<List<String>> theater_list = esql.executeQueryAndReturnResult(query);
+			
+			query = "SELECT mvid, title FROM movies";
+			System.out.println("movie id | title");
+			List<List<String>> movie_list = esql.executeQueryAndReturnResult(query);
+			movie_list.forEach(System.out::println);
+			System.out.println("Select a movie id: ");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			String selected_mvid  = inp.readLine();
+			
+			query = "SELECT * FROM movies WHERE mvid=" + selected_mvid;
+			List<List<String>> mvid_check = esql.executeQueryAndReturnResult(query);
+			if(mvid_check.size() == 0){
+				System.out.println("Invalid mvid");
+				return;
+			}
+			
+			System.out.println("Theater ID | Theater Name | Start Date | Start Time | End Time | Movie Title");
+			for(int i = 0; i < theater_list.size(); i++){
+				query = "SELECT P.tid,T.tname,S.sdate,S.sttime,S.edtime,M.title FROM plays P, shows S, movies M, theaters T WHERE S.mvid = M.mvid AND P.sid = S.sid AND P.tid=T.tid AND T.tid = " + theater_list.get(i).get(0) + "AND M.mvid = " + selected_mvid;
+				List<List<String>> temp = esql.executeQueryAndReturnResult(query);
+				temp.forEach(System.out::println);
+			}
+			System.out.println("Done listing all theaters in a cinema playing a given show");
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 		
 	}
 	
