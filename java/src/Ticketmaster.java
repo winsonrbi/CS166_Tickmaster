@@ -248,6 +248,7 @@ public class Ticketmaster{
 			
 			boolean keepon = true;
 			while(keepon){
+				System.out.println("---------");
 				System.out.println("MAIN MENU");
 				System.out.println("---------");
 				System.out.println("1. Add User");
@@ -706,8 +707,20 @@ public class Ticketmaster{
 	}
 
 	public static void ListMovieTitlesContainingLoveReleasedAfter2010(Ticketmaster esql){//11
-		//
-		
+		try{
+			//
+			String query = "SELECT title, rdate FROM movies WHERE rdate >= '2010-01-01' AND title LIKE '%Love%'";
+			List<List<String>> query_result = esql.executeQueryAndReturnResult(query);
+			System.out.println("Movie Title | Release Date");
+			query_result.forEach(System.out::println);	
+			
+			query = "SELECT title, rdate FROM movies WHERE rdate >= '2010-01-01' AND title LIKE '%love%'";
+			query_result = esql.executeQueryAndReturnResult(query);
+			query_result.forEach(System.out::println);	
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 	}
 
 	public static void ListUsersWithPendingBooking(Ticketmaster esql){//12
