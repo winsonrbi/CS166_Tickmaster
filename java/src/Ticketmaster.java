@@ -623,7 +623,7 @@ public class Ticketmaster{
 	
 	public static void ChangeSeatsForBooking(Ticketmaster esql) throws Exception{//5
 	String query = null;
-	string changedSeat = null;
+	String changedSeat = null;
 	boolean foundSeat = false;
 		try{
 			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
@@ -663,7 +663,7 @@ public class Ticketmaster{
 			System.out.println("Enter the seat number you would like your current seat " + origSeat + " to be replaced by. You must choose a seat that is available and the same price as your old one.");
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			String replacementSeat = inp.readLine();
-			query = "SELECT sno FROM showseats S, cinemaseats C WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid = NULL AND S.price = '" + origSeatPrice.get(i).get(0) + "'";						
+			query = "SELECT sno FROM showseats S, cinemaseats C WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid = NULL AND S.price = '" + origSeatPrice.get(0).get(0) + "'";						
 			List<List<String>> isSeatAvailList = esql.executeQueryAndReturnResult(query);
 			if(isSeatAvailList.size() == 0){
 				System.out.println("Invalid seat number. You must choose a seat that is available and the same price as your old one.");
@@ -689,7 +689,7 @@ public class Ticketmaster{
 	String query = null;
 		try{
 			System.out.println("Enter a bookings ID to cancel.");
-			inp = new BufferedReader (new InputStreamReader(System.in));
+			BufferedReader inp = new BufferedReader (new InputStreamReader(System.in));
 			String bid = inp.readLine();
 			query = "SELECT * FROM bookings WHERE bid = '" + bid + "'";
 			List<List<String>> bid_check = esql.executeQueryAndReturnResult(query);
@@ -737,7 +737,7 @@ public class Ticketmaster{
 			System.out.println("Cinema ID | Cinema Name | Num Theaters | City");
 			cinema_list.forEach(System.out::println);
 			System.out.println("Enter a Cinema ID");
-			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+			inp = new BufferedReader(new InputStreamReader(System.in));
 
 			String cinema_id = inp.readLine();
 			query = "SELECT * FROM theaters WHERE cid=" + cinema_id;
