@@ -738,6 +738,7 @@ public class Ticketmaster{
 
 	public static void ListMovieAndShowInfoAtCinemaInDateRange(Ticketmaster esql){//13
 		try{
+			//Select Movie
 			String query = null;
 			List<List<String>> query_result = esql.executeQueryAndReturnResult("SELECT mvid,title FROM movies");
 			System.out.println("Movie ID | Movie Title");
@@ -746,6 +747,7 @@ public class Ticketmaster{
 			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
 			String mvid = inp.readLine();
 			try{
+				query = "SELECT * FROM movies WHERE mvid='" + mvid + "'"; 
 				List<List<String>> selected_query = esql.executeQueryAndReturnResult(query);
 				if(selected_query.size() == 0){
 					System.out.println("ERROR: No movies with movie id found");
@@ -762,9 +764,44 @@ public class Ticketmaster{
 				String cid = inp.readLine();
 						
 				//Select Date Range
+				System.out.println("Enter Start Search Date (FORMAT: yyyy-MM-dd)");
+				inp = new BufferedReader(new InputStreamReader(System.in));
+				String sdate= inp.readLine();
+						
+				DateFormat date_check = new SimpleDateFormat("yyyy-MM-dd");
+				date_check.setLenient(false);
+				try{
+					date_check.parse(sdate);
+				}	
+				catch(Exception e){
+					System.out.println("Error: Invalid date");
+					return;
+				}
+				
+				System.out.println("Enter End Search Date (FORMAT: yyyy-MM-dd)");
+				inp = new BufferedReader(new InputStreamReader(System.in));
+				String edate= inp.readLine();
+				try{
+					date_check.parse(edate);
+				}	
+				catch(Exception e){
+					System.out.println("Error: Invalid date");
+					return;
+				}
+				query = "SELECT C1.cname,C2.city_name FROM cinemas C1, cities C2 WHERE C1.city_id= C2.city_id AND C1.cid = '" + cid + "'";
+				List<List<String>>  cinema_display = esql.executeQueryAndReturnResult
+(query);
+				System.out.println("Movies at " + cinema_display.get(0).get(0) + " in " + cinema_display.get(0).get(1));
+				
+				query = "SELECT M.title, S.sdate,S.sttime,S.edtime,T.tid,T.tname FROM theaters T, plays P, shows S, movies M WHERE T.cid = '" + cid + "' AND S.mvid = M.mvid AND P.sid = S.sid AND T.tid = P.tid and S.sdate BETWEEN '" + sdate + "' AND '" + edate + "' AND M.mvid = '" + mvid + "'";
+				List<List<String>> shows_list = esql.executeQueryAndReturnResult(query);
+				System.out.println("Movie Title | Show Date | Start Time | End Time | Theater ID  | Theater name");		
+				shows_list.forEach(System.out::println);				
+				System.out.println("Done Printing Shows");
 			}
 			catch(SQLException e){
 				System.out.println("Invalid Movie ID");
+				System.out.println(e);
 				return;
 			}	
 		}
