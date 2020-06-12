@@ -715,7 +715,7 @@ public class Ticketmaster{
 			esql.executeUpdate(query);	
 			System.out.println("All canceled bookings have been successfully removed."); 	
 		}
-		catch(SQLException e){
+		catch(Exception e){
 			System.out.println(e);	
 		}
 	}
