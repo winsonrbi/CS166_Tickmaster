@@ -622,19 +622,139 @@ public class Ticketmaster{
 	}
 	
 	public static void ChangeSeatsForBooking(Ticketmaster esql) throws Exception{//5
-		
+	String query = null;
+	string changedSeat = null;
+	boolean foundSeat = false;
+		try{
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter a bookings ID to change seating information");
+			String bid = inp.readLine();
+			query = "SELECT * FROM bookings WHERE bid = '" + bid + "'";
+			List<List<String>> bid_check = esql.executeQueryAndReturnResult(query);
+			if(bid_check.size() == 0){
+				System.out.println("Invalid booking ID");
+				return;
+			}
+			//Grab seating info
+			query = "SELECT sno FROM showseats S, cinemaseats C WHERE S.csid = C.csid AND bid = '" + bid + "' ORDER BY C.sno ASC";			
+			List<List<String>> seat_no_list = esql.executeQueryAndReturnResult(query);
+			System.out.println("Your Seat Numbers");
+			seat_no_list.forEach(System.out::println);
+			System.out.println("Enter the seat number you currently have reserved that you would like to change");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			String origSeat = inp.readLine();
+			for(int i = 0; i < seat_no_list.size(); i++){
+				if(seat_no_list.get(i).get(0).equals(origSeat)){
+					foundSeat = true;
+					break;
+				}	
+			}
+			
+			if(!foundSeat)
+			{
+				System.out.println("Invalid seat ID");
+				return;					
+			}
+			
+			query = "SELECT price FROM showseats S WHERE S.csid = '" + origSeat + "'";			
+			List<List<String>> origSeatPrice = esql.executeQueryAndReturnResult(query);
+
+
+			System.out.println("Enter the seat number you would like your current seat " + origSeat + " to be replaced by. You must choose a seat that is available and the same price as your old one.");
+			inp = new BufferedReader(new InputStreamReader(System.in));
+			String replacementSeat = inp.readLine();
+			query = "SELECT sno FROM showseats S, cinemaseats C WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid = NULL AND S.price = '" + origSeatPrice.get(i).get(0) + "'";						
+			List<List<String>> isSeatAvailList = esql.executeQueryAndReturnResult(query);
+			if(isSeatAvailList.size() == 0){
+				System.out.println("Invalid seat number. You must choose a seat that is available and the same price as your old one.");
+				return;
+			}
+			
+			query = "UPDATE showseats S, cinemaseats C SET S.bid = '" + bid + "' WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid";
+			esql.executeUpdate(query);
+			query = "UPDATE showseats S, cinemaseats C SET S.bid = NULL WHERE C.sno = '" + origSeat + "' AND S.csid = C.csid";
+			esql.executeUpdate(query);
+			
+			
+			System.out.println("Your seat number " + origSeat + " has been successfully changed to seat number " + replacementSeat + ".");
+
+			
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}	
 	}
 	
 	public static void RemovePayment(Ticketmaster esql){//6
-		
+	String query = null;
+		try{
+			System.out.println("Enter a bookings ID to cancel.");
+			inp = new BufferedReader (new InputStreamReader(System.in));
+			String bid = inp.readLine();
+			query = "SELECT * FROM bookings WHERE bid = '" + bid + "'";
+			List<List<String>> bid_check = esql.executeQueryAndReturnResult(query);
+			if(bid_check.size() == 0){
+				System.out.println("Invalid booking ID");
+				return;
+			}
+
+			query = "UPDATE bookings SET status = 'Canceled' WHERE bid = '" + bid + "'";
+			esql.executeUpdate(query);	
+			System.out.println("Bookings ID " + bid + " has been successfully canceled."); 	
+		}
+		catch(SQLException e){
+			System.out.println(e);	
+		}
+
 	}
 	
 	public static void ClearCancelledBookings(Ticketmaster esql){//7
-		
+	String query = null;
+		try{
+			query = "REMOVE FROM bookings WHERE status = 'Canceled'";
+			esql.executeUpdate(query);	
+			System.out.println("All canceled bookings have been successfully removed."); 	
+		}
+		catch(SQLException e){
+			System.out.println(e);	
+		}
 	}
 	
 	public static void RemoveShowsOnDate(Ticketmaster esql){//8
-		
+		//Grab Date
+		try{
+			System.out.println("Enter Date: (FORMAT yyyy-MM-dd)");
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+			String date = inp.readLine();
+			String query = null;
+
+			DateFormat show_date_check = new SimpleDateFormat("yyyy-MM-dd");
+			show_date_check.setLenient(false);
+			show_date_check.parse(date);
+			
+			query = "SELECT X.cid, X.cname, X.tnum, C.city_name FROM cinemas X, cities C WHERE X.city_id = C.city_id";
+			List<List<String>> cinema_list = esql.executeQueryAndReturnResult(query);
+			System.out.println("Cinema ID | Cinema Name | Num Theaters | City");
+			cinema_list.forEach(System.out::println);
+			System.out.println("Enter a Cinema ID");
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+
+			String cinema_id = inp.readLine();
+			query = "SELECT * FROM theaters WHERE cid=" + cinema_id;
+			List<List<String>> theater_list = esql.executeQueryAndReturnResult(query);
+
+			for(int i = 0; i < theater_list.size(); i++){
+				query = "DELETE FROM plays P, shows S, movies M, theaters T WHERE S.sdate='"+ date +"' AND S.mvid = M.mvid AND P.sid = S.sid AND P.tid=T.tid AND T.tid = " + theater_list.get(i).get(0);
+				List<List<String>> temp = esql.executeQueryAndReturnResult(query);
+				temp.forEach(System.out::println);
+			}
+			
+			System.out.println("Successfully removed all shows in a cinema playing on the date of " + date);
+
+		  }
+			catch(Exception e){
+				System.out.println(e);
+			}
 	}
 	
 	public static void ListTheatersPlayingShow(Ticketmaster esql){//9
