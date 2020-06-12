@@ -702,7 +702,7 @@ public class Ticketmaster{
 			esql.executeUpdate(query);	
 			System.out.println("Bookings ID " + bid + " has been successfully canceled."); 	
 		}
-		catch(SQLException e){
+		catch(Exception e){
 			System.out.println(e);	
 		}
 
@@ -715,7 +715,7 @@ public class Ticketmaster{
 			esql.executeUpdate(query);	
 			System.out.println("All canceled bookings have been successfully removed."); 	
 		}
-		catch(Exception e){
+		catch(SQLException e){
 			System.out.println(e);	
 		}
 	}
