@@ -813,7 +813,40 @@ public class Ticketmaster{
 
 	public static void ListBookingInfoForUser(Ticketmaster esql){//14
 		//
-		
+		try{
+			System.out.println("Enter User Email");
+			BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
+			String email = inp.readLine();
+			
+			String query = "SELECT * FROM users WHERE email = '" + email + "'";
+			List<List<String>> user_check = esql.executeQueryAndReturnResult(query);
+			if(user_check.size() == 0){
+				System.out.println("User does not exist");
+				return;
+			}
+			query = "SELECT B.bid, S.sdate,S.sttime, S.edtime, M.title, T.tname FROM bookings B, shows S, movies M, theaters T,plays P WHERE S.sid = P.sid AND P.tid = T.tid AND B.sid = S.sid AND S.mvid = M.mvid AND B.email = '" + email + "'";		
+			List<List<String>> bookings_list = esql.executeQueryAndReturnResult(query);
+			System.out.println(" Booking ID | Show Date | Start Time | End Time | Movie Title | Theater Name");
+			bookings_list.forEach(System.out::println);	
+			System.out.println("Enter a bookings ID to get seating information");
+			inp = new BufferedReader (new InputStreamReader(System.in));
+			String bid = inp.readLine();
+			query = "SELECT * FROM bookings WHERE email = '" + email + "' AND bid = '" + bid + "'";
+			List<List<String>> bid_check = esql.executeQueryAndReturnResult(query);
+			if(bid_check.size() == 0){
+				System.out.println("Invalid booking ID");
+				return;
+			}
+			//Grab seating info
+			query = "SELECT sno FROM showseats S, cinemaseats C WHERE S.csid = C.csid AND bid = '" + bid + "' ORDER BY C.sno ASC";			
+			List<List<String>> seat_no_list = esql.executeQueryAndReturnResult(query);
+			System.out.println("Your Seat Numbers");
+			seat_no_list.forEach(System.out::println);
+			System.out.println("Done Printing Seats");
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}		
 	}
 	
 }
