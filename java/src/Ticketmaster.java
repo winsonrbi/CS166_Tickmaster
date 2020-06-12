@@ -688,8 +688,8 @@ public class Ticketmaster{
 	public static void RemovePayment(Ticketmaster esql){//6
 	String query = null;
 		try{
-			System.out.println("Enter a bookings ID to cancel.");
 			BufferedReader inp = new BufferedReader (new InputStreamReader(System.in));
+			System.out.println("Enter a bookings ID to cancel.");
 			String bid = inp.readLine();
 			query = "SELECT * FROM bookings WHERE bid = '" + bid + "'";
 			List<List<String>> bid_check = esql.executeQueryAndReturnResult(query);
