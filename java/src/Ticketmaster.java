@@ -456,9 +456,21 @@ public class Ticketmaster{
 				
 				query = "INSERT into bookings(bid,status,bdatetime,seats,sid,email) VALUES ('"+ Integer.toString(next_bid) +"','"+ status + "','" + strDate + "','" + num_seats + "','" + show_time_id +"','" + email +"')";		
 				esql.executeUpdate(query);
-				for(int i=0; i < Integer.parseInt(num_seats);i++){
-					query = "UPDATE showseats SET bid =" + Integer.toString(next_bid) + "WHERE ssid ="+available_showseats.get(i).get(0);
-					esql.executeUpdate(query);
+				int orig_num_seats = num_seats;
+				for(int i=0; i < available_showseats.size();i++){
+					if(num_seats == 0) break;
+					query =  "SELECT C.sno, S.price FROM showseats S AND cinemaseats C WHERE ssid= '" + available_showseats.get(i).get(0) + "' AND C.csid= S.csid;
+					List<List<String>> seat_option = esql.executeQueryAndReturnResult(query);
+					seat_option.forEach(System.out::println);
+					System.out.println("Would you like this seat? (Current Seats " + num_seats + "/" + orig_num_seats + ")");
+					inp = new BufferedReader(new InputStreamReader(System.in));
+					String option = inp.readLine();
+					if(option == "yes"){
+						query = "UPDATE showseats SET bid =" + Integer.toString(next_bid) + "WHERE ssid ="+available_showseats.get(i).get(0);
+						esql.executeUpdate(query);
+						System.out.println("Seat Added");
+						num_seats--;
+					}
 				}
 				System.out.println("Booking Complete!");
 			}
