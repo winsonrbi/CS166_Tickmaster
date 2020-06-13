@@ -714,8 +714,10 @@ public class Ticketmaster{
 				return;
 			}
 
-			query = "UPDATE bookings SET status = 'Canceled' WHERE bid = '" + bid + "'";
-			esql.executeUpdate(query);	
+			query = "UPDATE bookings SET status = 'Cancelled' WHERE bid = '" + bid + "'";
+			esql.executeUpdate(query);
+			query = "UPDATE showseats SET bid = NULL WHERE bid = '" + bid + "'";
+			esql.executeUpdate(query);
 			System.out.println("Bookings ID " + bid + " has been successfully cancelled."); 	
 		}
 		catch(Exception e){
