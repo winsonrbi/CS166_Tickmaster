@@ -30,6 +30,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Calendar;
 import java.time.Duration;
+//SHA-256
+import java.math.BigInteger;  
+import java.nio.charset.StandardCharsets; 
+import java.security.MessageDigest;  
+import java.security.NoSuchAlgorithmException;
 /**
  * This class defines a simple embedded SQL utility class that is designed to
  * work with PostgreSQL JDBC drivers.
@@ -302,6 +307,8 @@ public class Ticketmaster{
 			}
 		}
 	}
+	
+
 
 	public static int readChoice() {
 		int input;
@@ -344,9 +351,24 @@ public class Ticketmaster{
 				System.out.print("Enter Password: ");
 				BufferedReader inp_password = new BufferedReader (new InputStreamReader(System.in));
 				String password = inp_password.readLine();
-		
-				query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+password+"\');";
-				esql.executeUpdate(query);	
+				//Calc SHA-256	
+				try{
+					MessageDigest md = MessageDigest.getInstance("SHA-256");
+					byte [] sha_bytes = md.digest(password.getBytes(StandardCharsets.UTF_8));
+					BigInteger number = new BigInteger(1, sha_bytes);
+					StringBuilder hexString = new StringBuilder(number.toString(16));
+					while (hexString.length()<32){
+						hexString.insert(0,'0');
+
+					}
+					String sha_hash = hexString.toString();	
+					//Done
+					query = "INSERT INTO users(email,lname,fname,phone,pwd) VALUES(\'"+email+"\',\'"+last_name+"\',\'"+first_name+"\',\'"+phone_number+"\',\'"+sha_hash+"\');";
+					esql.executeUpdate(query);	
+				}
+				catch(Exception e){
+					System.out.println(e);
+				}
 			}
 			catch(SQLException e){
 				System.out.println("Error trying to add user to database");
