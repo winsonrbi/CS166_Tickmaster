@@ -456,23 +456,27 @@ public class Ticketmaster{
 				
 				query = "INSERT into bookings(bid,status,bdatetime,seats,sid,email) VALUES ('"+ Integer.toString(next_bid) +"','"+ status + "','" + strDate + "','" + num_seats + "','" + show_time_id +"','" + email +"')";		
 				esql.executeUpdate(query);
-				int orig_num_seats = num_seats;
+				int num_seats_int = Integer.parseInt(num_seats);
+				int orig_num_seats = num_seats_int;
+				int total = 0;
 				for(int i=0; i < available_showseats.size();i++){
-					if(num_seats == 0) break;
-					query =  "SELECT C.sno, S.price FROM showseats S AND cinemaseats C WHERE ssid= '" + available_showseats.get(i).get(0) + "' AND C.csid= S.csid;
+					if(num_seats_int == 0) break;
+					query =  "SELECT C.sno, S.price FROM showseats S, cinemaseats C WHERE ssid= '" + available_showseats.get(i).get(0) + "' AND C.csid= S.csid";
+					System.out.println("Seat Number | Price");
 					List<List<String>> seat_option = esql.executeQueryAndReturnResult(query);
 					seat_option.forEach(System.out::println);
-					System.out.println("Would you like this seat? (Current Seats " + num_seats + "/" + orig_num_seats + ")");
-					inp = new BufferedReader(new InputStreamReader(System.in));
+					System.out.println("Would you like this seat? (yes|no) (Seats Needed: '" + Integer.toString(num_seats_int) + "')");
+					BufferedReader inp = new BufferedReader(new InputStreamReader(System.in));
 					String option = inp.readLine();
-					if(option == "yes"){
+					if(option.equals("yes")){
 						query = "UPDATE showseats SET bid =" + Integer.toString(next_bid) + "WHERE ssid ="+available_showseats.get(i).get(0);
 						esql.executeUpdate(query);
 						System.out.println("Seat Added");
-						num_seats--;
+						num_seats_int = num_seats_int - 1;
+						total = total + Integer.parseInt(seat_option.get(0).get(1));
 					}
 				}
-				System.out.println("Booking Complete!");
+				System.out.println("Booking Complete! Total: $" + total);
 			}
 			catch(SQLException e){
 				System.out.println(e);	
@@ -675,12 +679,12 @@ public class Ticketmaster{
 				return;					
 			}
 			
-			query = "SELECT S.price,S.sid FROM showseats S, cinemaseats C WHERE C.sno = '" + origSeat + "' AND  S.csid = C.csid AND bid = '" + bid + "'" ;			
+			query = "SELECT S.price,S.sid,C.csid FROM showseats S, cinemaseats C WHERE C.sno = '" + origSeat + "' AND  S.csid = C.csid AND bid = '" + bid + "'" ;			
 			List<List<String>> origSeatPrice = esql.executeQueryAndReturnResult(query);
 
 
 			System.out.println("Enter the seat number you would like your current seat " + origSeat + " to be replaced by. You must choose a seat that is available and the same price as your old one. (" + origSeatPrice.get(0).get(0)+ " dollars)");
-			query = "SELECT C.sno, S.price FROM showseats S, cinemaseats C WHERE S.csid = C.csid AND  S.sid = '" + origSeatPrice.get(0).get(1) + "' AND bid is null";
+			query = "SELECT C.sno, S.price FROM showseats S, cinemaseats C WHERE S.csid = C.csid AND  S.sid = '" + origSeatPrice.get(0).get(1) + "' AND bid is null AND S.price = '" + origSeatPrice.get(0).get(0) + "'";
 			List<List<String>> avail_seats = esql.executeQueryAndReturnResult(query);
 			if(avail_seats.size() == 0){
 				System.out.println("Sorry there are no seats available at the same price!");
@@ -690,17 +694,17 @@ public class Ticketmaster{
 			avail_seats.forEach(System.out::println); 
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			String replacementSeat = inp.readLine();
-			query = "SELECT C.sno FROM showseats S, cinemaseats C WHERE S.sid = '" + origSeatPrice.get(0).get(1) +"' AND  C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid is NULL AND S.price = '" + origSeatPrice.get(0).get(0) + "'";						
+			query = "SELECT C.sno, C.csid FROM showseats S, cinemaseats C WHERE S.sid = '" + origSeatPrice.get(0).get(1) +"' AND  C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid is NULL AND S.price = '" + origSeatPrice.get(0).get(0) + "'";						
 			List<List<String>> isSeatAvailList = esql.executeQueryAndReturnResult(query);
 			if(isSeatAvailList.size() == 0){
 				System.out.println("Invalid seat number. You must choose a seat that is available and the same price as your old one.");
 				return;
 			}
 			
-			query = "UPDATE showseats S SET bid = '" + bid + "' WHERE S.csid = (SELECT C.csid FROM cinemaseats C, showseats S WHERE C.sno = '" + replacementSeat + "' AND S.sid ='" + origSeatPrice.get(0).get(1) + "' AND C.csid = S.csid)";
+			query = "UPDATE showseats S SET bid = '" + bid + "' WHERE S.csid = '" + isSeatAvailList.get(0).get(1) + "' AND S.sid = '" + origSeatPrice.get(0).get(1) + "'";
 			esql.executeUpdate(query);
 			System.out.println("CHECK");
-			query = "UPDATE showseats S SET bid = NULL WHERE S.csid = (SELECT C.csid FROM cinemaseats C, showseats S WHERE C.sno = '" + origSeat + "' AND S.sid = '" + origSeatPrice.get(0).get(1) + "' AND C.csid = S.csid)";
+			query = "UPDATE showseats S SET bid = NULL WHERE S.csid = '" + origSeatPrice.get(0).get(2) + "' AND S.sid = '" + origSeatPrice.get(0).get(1) + "'";
 			esql.executeUpdate(query);
 			
 			
