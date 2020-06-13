@@ -360,7 +360,7 @@ public class Ticketmaster{
 		
 
 	}
-	
+//TODO: Allow users to pick seats	
 	public static void AddBooking(Ticketmaster esql){//2
 		try{
 			String email = null;
@@ -482,6 +482,9 @@ public class Ticketmaster{
 		String lang = null;
 		String genre = null;
 		String next_mvid = null;
+		String selected_start_time = null;
+		Date start_time = null;
+		Date end_time = null;
 		try{
 			BufferedReader inp = null;
 			System.out.println("Add a New Movie");
@@ -557,42 +560,46 @@ public class Ticketmaster{
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			String show_date = inp.readLine();	
 			
+			DateFormat show_time_check = new SimpleDateFormat("HH:mm:ss");
+			show_time_check.setLenient(false);
 			DateFormat show_date_check = new SimpleDateFormat("yyyy-MM-dd");
 			show_date_check.setLenient(false);
+			boolean time_conflict_check = true;
 			try{
 				show_date_check.parse(show_date);
-				//Check if times for date are overlapping
-				query = "SELECT sttime,edtime FROM shows S, plays P WHERE  S.sid = P.sid AND tid=" + tid + " AND sdate='" + show_date +"'";
-				List<List<String>> date_check_list = esql.executeQueryAndReturnResult(query);
-				date_check_list.forEach(System.out::println);
-				System.out.println("Enter start time for movie (FORMAT: HH:mm:ss)");
-				inp = new BufferedReader (new InputStreamReader(System.in));
-				String selected_start_time = inp.readLine();
-				DateFormat show_time_check = new SimpleDateFormat("HH:mm:ss");
-				show_time_check.setLenient(false);
-				Date start_time = show_time_check.parse(selected_start_time);	
-				Date end_time = Date.from(start_time.toInstant().plus(Duration.ofSeconds(Integer.parseInt(duration))));
-					
-				for(int i = 0; i<date_check_list.size(); i++){
-					Date list_start = show_time_check.parse(date_check_list.get(i).get(0));
-					Date list_end = show_time_check.parse(date_check_list.get(i).get(1));
-					
-					if(!(start_time.after(list_end) || end_time.before(list_start))){
-						System.out.println("Conflicting times, another movie is playing at the same time");
-						return;
+				while(time_conflict_check == true){
+					//Check if times for date are overlapping
+					time_conflict_check = false;
+					query = "SELECT sttime,edtime FROM shows S, plays P WHERE  S.sid = P.sid AND tid=" + tid + " AND sdate='" + show_date +"'";
+					List<List<String>> date_check_list = esql.executeQueryAndReturnResult(query);
+					date_check_list.forEach(System.out::println);
+					System.out.println("Enter start time for movie (FORMAT: HH:mm:ss)");
+					inp = new BufferedReader (new InputStreamReader(System.in));
+					selected_start_time = inp.readLine();
+					start_time = show_time_check.parse(selected_start_time);	
+					end_time = Date.from(start_time.toInstant().plus(Duration.ofSeconds(Integer.parseInt(duration))));
+						
+					for(int i = 0; i<date_check_list.size(); i++){
+						Date list_start = show_time_check.parse(date_check_list.get(i).get(0));
+						Date list_end = show_time_check.parse(date_check_list.get(i).get(1));
+						
+						if(!(start_time.after(list_end) || end_time.before(list_start))){
+							System.out.println("Conflicting times, another movie is playing at the same time");
+							time_conflict_check = true;
+						}
 					}
-					//Get data ready to insert into shows
-					String endtime_str = show_time_check.format(end_time);
-					//Grab max show id
-					query = "SELECT MAX(sid) FROM shows";
-					int next_sid = Integer.parseInt(esql.executeQueryAndReturnResult(query).get(0).get(0)) + 1;	
-					query = "INSERT into shows(sid,mvid,sdate,sttime,edtime) VALUES('" + Integer.toString(next_sid) + "','" + next_mvid + "','" + show_date + "','" + selected_start_time + "','" + endtime_str + "')";
-					esql.executeUpdate(query);
-					//Insert into table plays as well
-					query = "INSERT into plays(sid,tid) VALUES('" + Integer.toString(next_sid) + "','" + tid + "')";
-					esql.executeUpdate(query);	
-					System.out.println("Show Added"); 
-				}	
+				}
+				//Get data ready to insert into shows
+				String endtime_str = show_time_check.format(end_time);
+				//Grab max show id
+				query = "SELECT MAX(sid) FROM shows";
+				int next_sid = Integer.parseInt(esql.executeQueryAndReturnResult(query).get(0).get(0)) + 1;	
+				query = "INSERT into shows(sid,mvid,sdate,sttime,edtime) VALUES('" + Integer.toString(next_sid) + "','" + next_mvid + "','" + show_date + "','" + selected_start_time + "','" + endtime_str + "')";
+				esql.executeUpdate(query);
+				//Insert into table plays as well
+				query = "INSERT into plays(sid,tid) VALUES('" + Integer.toString(next_sid) + "','" + tid + "')";
+				esql.executeUpdate(query);	
+				System.out.println("Show Added"); 
 			}	
 			catch(Exception e){
 				System.out.println("Error: Invalid date");
@@ -612,9 +619,9 @@ public class Ticketmaster{
 	public static void CancelPendingBookings(Ticketmaster esql){//4
 	String query = null;
 		try{
-			query = "UPDATE bookings SET status = 'Canceled' WHERE status = 'Pending'";
+			query = "UPDATE bookings SET status = 'Cancelled' WHERE status = 'Pending'";
 			esql.executeUpdate(query);	
-			System.out.println("All pending bookings have been successfully canceled."); 	
+			System.out.println("All pending bookings have been successfully cancelled."); 	
 		}
 		catch(SQLException e){
 			System.out.println(e);	
@@ -656,23 +663,32 @@ public class Ticketmaster{
 				return;					
 			}
 			
-			query = "SELECT price FROM showseats S WHERE S.csid = '" + origSeat + "'";			
+			query = "SELECT S.price,S.sid FROM showseats S, cinemaseats C WHERE C.sno = '" + origSeat + "' AND  S.csid = C.csid AND bid = '" + bid + "'" ;			
 			List<List<String>> origSeatPrice = esql.executeQueryAndReturnResult(query);
 
 
-			System.out.println("Enter the seat number you would like your current seat " + origSeat + " to be replaced by. You must choose a seat that is available and the same price as your old one.");
+			System.out.println("Enter the seat number you would like your current seat " + origSeat + " to be replaced by. You must choose a seat that is available and the same price as your old one. (" + origSeatPrice.get(0).get(0)+ " dollars)");
+			query = "SELECT C.sno, S.price FROM showseats S, cinemaseats C WHERE S.csid = C.csid AND  S.sid = '" + origSeatPrice.get(0).get(1) + "' AND bid is null";
+			List<List<String>> avail_seats = esql.executeQueryAndReturnResult(query);
+			if(avail_seats.size() == 0){
+				System.out.println("Sorry there are no seats available at the same price!");
+				return;
+			}
+			System.out.println("Seat No. | Price");
+			avail_seats.forEach(System.out::println); 
 			inp = new BufferedReader(new InputStreamReader(System.in));
 			String replacementSeat = inp.readLine();
-			query = "SELECT sno FROM showseats S, cinemaseats C WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid = NULL AND S.price = '" + origSeatPrice.get(0).get(0) + "'";						
+			query = "SELECT C.sno FROM showseats S, cinemaseats C WHERE S.sid = '" + origSeatPrice.get(0).get(1) +"' AND  C.sno = '" + replacementSeat + "' AND S.csid = C.csid AND S.bid is NULL AND S.price = '" + origSeatPrice.get(0).get(0) + "'";						
 			List<List<String>> isSeatAvailList = esql.executeQueryAndReturnResult(query);
 			if(isSeatAvailList.size() == 0){
 				System.out.println("Invalid seat number. You must choose a seat that is available and the same price as your old one.");
 				return;
 			}
 			
-			query = "UPDATE showseats S, cinemaseats C SET S.bid = '" + bid + "' WHERE C.sno = '" + replacementSeat + "' AND S.csid = C.csid";
+			query = "UPDATE showseats S SET bid = '" + bid + "' WHERE S.csid = (SELECT C.csid FROM cinemaseats C, showseats S WHERE C.sno = '" + replacementSeat + "' AND S.sid ='" + origSeatPrice.get(0).get(1) + "' AND C.csid = S.csid)";
 			esql.executeUpdate(query);
-			query = "UPDATE showseats S, cinemaseats C SET S.bid = NULL WHERE C.sno = '" + origSeat + "' AND S.csid = C.csid";
+			System.out.println("CHECK");
+			query = "UPDATE showseats S SET bid = NULL WHERE S.csid = (SELECT C.csid FROM cinemaseats C, showseats S WHERE C.sno = '" + origSeat + "' AND S.sid = '" + origSeatPrice.get(0).get(1) + "' AND C.csid = S.csid)";
 			esql.executeUpdate(query);
 			
 			
@@ -700,7 +716,7 @@ public class Ticketmaster{
 
 			query = "UPDATE bookings SET status = 'Canceled' WHERE bid = '" + bid + "'";
 			esql.executeUpdate(query);	
-			System.out.println("Bookings ID " + bid + " has been successfully canceled."); 	
+			System.out.println("Bookings ID " + bid + " has been successfully cancelled."); 	
 		}
 		catch(Exception e){
 			System.out.println(e);	
@@ -711,9 +727,9 @@ public class Ticketmaster{
 	public static void ClearCancelledBookings(Ticketmaster esql){//7
 	String query = null;
 		try{
-			query = "REMOVE FROM bookings WHERE status = 'Canceled'";
+			query = "REMOVE FROM bookings WHERE status = 'Cancelled'";
 			esql.executeUpdate(query);	
-			System.out.println("All canceled bookings have been successfully removed."); 	
+			System.out.println("All cancelled bookings have been successfully removed."); 	
 		}
 		catch(SQLException e){
 			System.out.println(e);	
@@ -744,9 +760,8 @@ public class Ticketmaster{
 			List<List<String>> theater_list = esql.executeQueryAndReturnResult(query);
 
 			for(int i = 0; i < theater_list.size(); i++){
-				query = "DELETE FROM plays P, shows S, movies M, theaters T WHERE S.sdate='"+ date +"' AND S.mvid = M.mvid AND P.sid = S.sid AND P.tid=T.tid AND T.tid = " + theater_list.get(i).get(0);
-				List<List<String>> temp = esql.executeQueryAndReturnResult(query);
-				temp.forEach(System.out::println);
+				query = "DELETE FROM plays P USING shows S, theaters T WHERE S.sdate='"+ date +"' AND P.sid = S.sid AND P.tid=T.tid AND T.tid = " + theater_list.get(i).get(0);
+				esql.executeUpdate(query);
 			}
 			
 			System.out.println("Successfully removed all shows in a cinema playing on the date of " + date);
