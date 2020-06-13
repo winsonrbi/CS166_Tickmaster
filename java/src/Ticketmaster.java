@@ -718,6 +718,8 @@ public class Ticketmaster{
 			esql.executeUpdate(query);
 			query = "UPDATE showseats SET bid = NULL WHERE bid = '" + bid + "'";
 			esql.executeUpdate(query);
+			query = "DELETE FROM payments WHERE bid = '" + bid + "'";
+			esql.executeUpdate(query);
 			System.out.println("Bookings ID " + bid + " has been successfully cancelled."); 	
 		}
 		catch(Exception e){
