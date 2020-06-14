@@ -769,7 +769,7 @@ public class Ticketmaster{
 	public static void ClearCancelledBookings(Ticketmaster esql){//7
 	String query = null;
 		try{
-			query = "REMOVE FROM bookings WHERE status = 'Cancelled'";
+			query = "DELETE FROM bookings WHERE status = 'Cancelled'";
 			esql.executeUpdate(query);	
 			System.out.println("All cancelled bookings have been successfully removed."); 	
 		}

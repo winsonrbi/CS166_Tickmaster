@@ -112,7 +112,7 @@ CREATE TABLE ShowSeats (
     PRIMARY KEY(ssid),
     FOREIGN KEY(sid) REFERENCES Shows(sid),
     FOREIGN KEY(csid) REFERENCES CinemaSeats(csid),
-    FOREIGN KEY(bid) REFERENCES Bookings(bid),
+    FOREIGN KEY(bid) REFERENCES Bookings(bid) ON DELETE SET NULL,
     UNIQUE(sid, csid)  -- The same seat can only be booked once for the same show
 );
 
